@@ -1,0 +1,24 @@
+﻿  Application.cpp
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(73,40): warning C4244: '引数': 'uint64_t' から 'DWORD' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(75,28): warning C4244: '=': 'ULONGLONG' から 'int' への変換です。データが失われる可能性があります。
+  SceneGame.cpp
+  Input.cpp
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Input.cpp(50,19): error C2039: 'contains': 'std::map<std::string,std::vector<Input::InputState,std::allocator<Input::InputState>>,std::less<std::string>,std::allocator<std::pair<const std::string,std::vector<Input::InputState,std::allocator<Input::InputState>>>>>' のメンバーではありません
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Input.h(27): message : 'std::map<std::string,std::vector<Input::InputState,std::allocator<Input::InputState>>,std::less<std::string>,std::allocator<std::pair<const std::string,std::vector<Input::InputState,std::allocator<Input::InputState>>>>>' の宣言を確認してください
+  main.cpp
+  Map.cpp
+  Pad.cpp
+  Player.cpp
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(14,25): warning C4244: '-=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(14,25): warning C4244: '+=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(50,54): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(50,26): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(49,35): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(49,20): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Scene.cpp
+  SceneController.cpp
+  SceneTitle.cpp
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(27,66): error C2664: 'void SceneController::ChangeScene(std::shared_ptr<Scene>)': 引数 1 を 'std::shared_ptr<SceneGame>' から 'std::shared_ptr<Scene>' へ変換できません。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(27,53): message : この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
+E:\data\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneController.h(37,7): message : 'SceneController::ChangeScene' の宣言を確認してください
+  コードを生成中...
