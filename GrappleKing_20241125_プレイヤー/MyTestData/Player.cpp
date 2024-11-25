@@ -26,7 +26,7 @@ namespace
 	//キャラクターの移動速度
 	constexpr float kSpeed = 4.0f;
 	//ロープを登る速度
-	constexpr float kSpeedUp = 12.0f;
+	constexpr float kSpeedUp = 8.0f;
 	//ロープが延びる速度
 	constexpr float kSpeedRope = 10.0f;
 
@@ -109,8 +109,30 @@ void Player::Update()
 		}		
 
 		m_isRopeMove = true;//現在ロープが伸びている		
-	}	
-	//上を押しているときの処理
+	}
+
+	//重力
+	if (!m_isRopeMove)
+	{
+		m_pos.y += kGravity;
+	}
+
+	if (m_pos.y >= kDefaultY)
+	{
+		//地面の判定
+		m_pos.y = kDefaultY;
+	}
+
+	if (m_pos.y >= kDefaultY)
+	{
+		m_isOnStage = true;
+	}
+	else
+	{
+		m_isOnStage = false;
+	}
+
+	//ロープが伸びているときの処理
 	if (m_isRopeMove)
 	{
 		//糸を伸ばしているとき
@@ -139,9 +161,9 @@ void Player::Update()
 		m_pos.y -= kSpeedUp;
 	}
 	//天井にめりこまないようにすこしずらす
-	if (m_pos.y <= 50 + kGraphHeight * 0.3f)
+	if (m_pos.y <= 50 + kGraphHeight * 0.4f)
 	{
-		m_pos.y = 50 + kGraphHeight * 0.3f;
+		m_pos.y = 50 + kGraphHeight * 0.4f;
 	}
 
 	m_animFrame++;
@@ -158,26 +180,7 @@ void Player::Update()
 		m_animFrame = 0;
 	}
 
-	//重力
-	if (!m_isRopeMove)
-	{
-		m_pos.y += kGravity;
-	}	
 	
-	if (m_pos.y >= kDefaultY)
-	{
-		//地面の判定
-		m_pos.y = kDefaultY;
-	}
-
-	if (m_pos.y >= kDefaultY)
-	{
-		m_isOnStage = true;
-	}
-	else
-	{
-		m_isOnStage = false;
-	}
 }
 
 void Player::Draw()
@@ -189,8 +192,5 @@ void Player::Draw()
 		2.0, 0,
 		m_useHandle, true, m_isDirLeft);
 	//ロープの描画
-//	if (m_isCanMove && (m_useHandle == m_handleUp))
-	{
-		DrawLine(m_pos.x, m_pos.y, m_pos.x, m_linePos.y, 0xffffff, 0);
-	}
+	DrawLine(m_pos.x, m_pos.y, m_pos.x, m_linePos.y, 0xffffff, 0);
 }
