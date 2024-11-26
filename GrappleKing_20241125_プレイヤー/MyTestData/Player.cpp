@@ -146,7 +146,10 @@ void Player::Update()
 	}
 
 	//ロープが天井に着いたら
-	if (m_linePos.y <= 50)
+	//ゴール以外は天井の当たり判定をなくす
+	if (((0 < m_pos.x && m_pos.x < 360) ||
+		(Game::kScreenWidth - 120 < m_pos.x && m_pos.x < Game::kScreenWidth))
+		&& m_linePos.y <= 50)
 	{
 		//これ以上伸ばさない
 		m_linePos.y = 50;
@@ -159,6 +162,16 @@ void Player::Update()
 
 		//ロープを登る
 		m_pos.y -= kSpeedUp;
+	}
+
+	//画面外にいかないようにする
+	if (m_pos.x < 0 + kGraphWidth*0.5f)
+	{
+		m_pos.x = 0 + kGraphWidth * 0.5f;
+	}
+	if (Game::kScreenWidth - kGraphWidth * 0.5f < m_pos.x)
+	{
+		m_pos.x = Game::kScreenWidth - kGraphWidth * 0.5f;
 	}
 	//天井にめりこまないようにすこしずらす
 	if (m_pos.y <= 50 + kGraphHeight * 0.4f)
@@ -186,11 +199,16 @@ void Player::Update()
 void Player::Draw()
 {
 	int animNo = m_animFrame / kSingleAnimFrame;
+	//ロープの描画
+	DrawLine(m_pos.x, m_pos.y-1, m_pos.x, m_linePos.y, 0xffffff, 0);
 	//プレイヤーの描画
 	DrawRectRotaGraph(m_pos.x, m_pos.y-kGraphHeight*0.25f,
 		animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 		2.0, 0,
-		m_useHandle, true, m_isDirLeft);
-	//ロープの描画
-	DrawLine(m_pos.x, m_pos.y, m_pos.x, m_linePos.y, 0xffffff, 0);
+		m_useHandle, true, m_isDirLeft);	
+
+	//プレイヤーの当たり判定
+	DrawBox(m_pos.x - kGraphWidth*0.36f, m_pos.y - kGraphHeight*0.36f,
+		m_pos.x + kGraphWidth * 0.36f, m_pos.y, 0xff0000, false);
+
 }

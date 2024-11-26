@@ -33,10 +33,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		player->Update();
 		player->Draw();
 
-		DrawLine(0, 50, 640, 50, 0xffffff, false);
-		DrawLine(0, 360, Game::kScreenWidth, 360, 0xffffff, false);	
-			
+//仮
+	//天井
+		DrawLine(0, 50, 360, 50, 0xffffff, false);
+		DrawLine(Game::kScreenWidth - 120, 50, Game::kScreenWidth, 50, 0xffffff, false);
 
+		//地面
+		DrawLine(0, 360, Game::kScreenWidth, 360, 0xffffff, false);
+		
 		// 画面の切り替わりを待つ必要がある
 		ScreenFlip();	// 1/60秒経過するまで待つ
 
