@@ -11,24 +11,22 @@ private:
 	// 背景
 	int backH_ = -1;
 
-	using UpdateFunc_t = void (SceneTitle::*) (Input&);
+	using UpdateFunc_t = void (SceneTitle::*) ();
 	using DrawFunc_t = void (SceneTitle::*) ();
 
 	UpdateFunc_t update_;
 	DrawFunc_t draw_;
 
 	// フェードイン時のUpdate
-	void FadeInUpdate(Input&);
+	void FadeInUpdate();
 	// とか
-	void FadeOutUpdate(Input&);
+	void FadeOutUpdate();
 	// そうでなかったり
-	void NormalUpdate(Input&);
+	void NormalUpdate();
 
 	// 描画
 	void FadeDraw();
 	void NormalDraw();
-
-
 
 public:
 	SceneTitle(SceneController& cont);
@@ -38,7 +36,7 @@ public:
 	/// virtual はこれを継承するかもしれないから、
 	/// overrideは明示的にオーバーライドをエディタに示すため
 	/// </summary>
-	virtual void Update(Input& input) override;
+	virtual void Update() override;
 
 	virtual void Draw() override;
 };

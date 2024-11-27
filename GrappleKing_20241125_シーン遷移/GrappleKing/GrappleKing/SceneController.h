@@ -3,7 +3,6 @@
 #include <memory>
 #include <list>
 
-class Input;
 class Scene;
 
 /// <summary>
@@ -19,12 +18,11 @@ private:
 public:
 	SceneController();
 
-
 	/// <summary>
 	/// Applicationから呼ばれる関数。現在のシーンのUpdateをそのまま実行。
 	/// </summary>
 	/// <param name="input"></param>
-	void Update(Input& input);
+	void Update();
 	/// <summary>
 	/// Applicationから呼ばれる関数。現在のシーンのDrawをそのまま実行。
 	/// </summary>

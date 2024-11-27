@@ -1,10 +1,10 @@
 #include "SceneTitle.h"
 #include "DxLib.h"
-#include "Input.h"
 #include "SceneController.h"
 #include "SceneGame.h"
 #include <cassert>
 #include "Application.h"
+#include "Pad.h"
 
 namespace
 {
@@ -16,21 +16,21 @@ SceneTitle::~SceneTitle()
 {
 }
 
-void SceneTitle::FadeInUpdate(Input&)
+void SceneTitle::FadeInUpdate()
 {
 	update_ = &SceneTitle::NormalUpdate;
 	draw_ = &SceneTitle::NormalDraw;
 }
 
-void SceneTitle::FadeOutUpdate(Input&)
+void SceneTitle::FadeOutUpdate()
 {
 	controller_.ChangeScene(std::make_shared<SceneGame>(controller_));
 }
 
-void SceneTitle::NormalUpdate(Input& input)
+void SceneTitle::NormalUpdate()
 {
 	// エンターキーが推されるまで何もしない
-		if (input.IsTrigger("next"))
+		if (Pad::IsTrigger(PAD_INPUT_1))
 		{
 			update_ = &SceneTitle::FadeOutUpdate;
 			draw_ = &SceneTitle::FadeDraw;
@@ -55,9 +55,9 @@ SceneTitle::SceneTitle(SceneController& cont) :
 
 }
 
-void SceneTitle::Update(Input& input)
+void SceneTitle::Update()
 {
-	(this->*update_) (input);
+	(this->*update_) ();
 }
 
 void SceneTitle::Draw()

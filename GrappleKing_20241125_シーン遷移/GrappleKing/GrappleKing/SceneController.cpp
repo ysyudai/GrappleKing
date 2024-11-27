@@ -12,10 +12,10 @@ SceneController::SceneController()
 	ChangeScene(std::make_shared<SceneTitle>(*this));
 }
 
-void SceneController::Update(Input& input)
+void SceneController::Update()
 {
 	// ˆê”Ôã‚É‚ ‚é‚â‚Â‚¾‚¯Update
-	scenes_.back()->Update(input);
+	scenes_.back()->Update();
 }
 
 void SceneController::Draw()

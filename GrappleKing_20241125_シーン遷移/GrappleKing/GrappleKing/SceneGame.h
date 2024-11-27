@@ -3,11 +3,12 @@
 #include "SceneController.h"
 #include "Player.h"
 #include "Map.h"
+#include "Scene.h"
 
-class SceneGame
+class SceneGame:public Scene
 {
 public:
-	SceneGame();
+	SceneGame(SceneController& cont);
 	~SceneGame();
 
 	void Init();

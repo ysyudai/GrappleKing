@@ -4,7 +4,7 @@
 #include "game.h"
 #include <string>
 #include "SceneController.h"
-#include "Input.h"
+#include "Pad.h"
 
 Application::Application() :
 	windowSize_({ 640, 480 })
@@ -43,7 +43,6 @@ bool Application::Init()
 void Application::Run()
 {
 	SceneController sceneController;
-	Input input;
 	// ゲームループ
 	constexpr uint64_t frame_milliseconds = 16;
 	auto lastTime = 0;
@@ -54,13 +53,13 @@ void Application::Run()
 		// 画面全体をクリアする
 		ClearDrawScreen();
 
-		input.Update();
+		Pad::Update();
 		
 
 		// ここにゲームの処理を書く
 
 		// このinputをシーン間で受け渡し続けている感じか
-		sceneController.Update(input);
+		sceneController.Update();
 		sceneController.Draw();
 
 		// 画面の切り替わりを待つ
@@ -74,6 +73,7 @@ void Application::Run()
 		}
 		lastTime = GetTickCount64();
 	}
+	Terminate();
 }
 
 void Application::Terminate()

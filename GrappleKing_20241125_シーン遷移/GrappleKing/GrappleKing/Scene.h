@@ -17,7 +17,7 @@ public:
 	/// “à•”•Ï”‚ÌXV
 	/// </summary>
 	/// <param name="input">“ü—Íó‘Ô</param>
-	virtual void Update(Input& input) = 0;
+	virtual void Update() = 0;
 
 	/// <summary>
 	///  •`‰æ
