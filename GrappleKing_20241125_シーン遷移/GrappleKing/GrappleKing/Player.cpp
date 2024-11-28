@@ -119,7 +119,7 @@ void Player::Update()
 		//地面の判定
 		m_pos.y = kDefaultY;
 	}
-	if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120)
+	if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120 && m_pos.y <= (50 + 360) * 0.5f)
 	{
 
 	}
@@ -161,14 +161,17 @@ void Player::Update()
 
 		//ロープを登る
 		m_pos.y -= kSpeedUp;
+
+		//天井にめりこまないようにすこしずらす
+		if (m_pos.y <= 50 + kGraphHeight * 0.4f)
+		{
+			m_pos.y = 50 + kGraphHeight * 0.4f;
+		}		
 	}
 	else if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120 && m_linePos.y <= -50)
 	{
 		//これ以上伸ばさない
 		m_linePos.y = -50;
-		//ボタンが押されるまではモーションを変えない
-		m_useHandle = m_handleUp;
-		m_totalFrame = kUpAnimNum * kSingleAnimFrame;
 
 		//ロープを登る
 		m_pos.y -= kSpeedUp;
@@ -179,16 +182,11 @@ void Player::Update()
 	{
 		m_pos.x = 0 + kGraphWidth * 0.36f;
 	}
-	if (GetRight() < m_pos.x)
+	if (Game::kScreenWidth < GetRight())
 	{
 		m_pos.x = Game::kScreenWidth - kGraphWidth * 0.36f;
 	}
-	//天井にめりこまないようにすこしずらす
-	if (m_pos.y <= 50 + kGraphHeight * 0.4f)
-	{
-		m_pos.y = 50 + kGraphHeight * 0.4f;
-	}
-
+	
 	m_animFrame++;
 
 	//アニメーションの合計フレーム数を超えたら最初に戻す
@@ -219,7 +217,7 @@ void Player::Draw()
 	//天井
 	DrawLine(0, 50, 360, 50, 0xffffff, false);
 	DrawLine(Game::kScreenWidth - 120, 50, Game::kScreenWidth, 50, 0xffffff, false);
-	DrawBox(360, (50 + 360) * 0.5f + 10,
+	DrawBox(360, (50 + 360) * 0.5f,
 		Game::kScreenWidth - 120, 360,
 		0xffffff, false);
 
@@ -229,7 +227,7 @@ void Player::Draw()
 #ifdef _DEBUG
 	//当たり判定のデバッグ表示
 	DrawBox(GetLeft(), GetTop(),
-		GetRight(), GetBotton(),
+		GetRight(), GetBottom(),
 		0xff0000, false);
 #endif
 }
@@ -249,7 +247,7 @@ float Player::GetRight() const
 	return (m_pos.x + kGraphWidth * 0.36f);
 }
 
-float Player::GetBotton() const
+float Player::GetBottom() const
 {
 	return m_pos.y;
 }

@@ -14,7 +14,7 @@ public:
 	float GetLeft() const;
 	float GetTop() const;
 	float GetRight() const;
-	float GetBotton() const;
+	float GetBottom() const;
 
 private:
 	//Œ»İ‚Ìƒnƒ“ƒhƒ‹

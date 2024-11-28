@@ -1,6 +1,7 @@
 #include "Bg.h"
 #include "DxLib.h"
 #include "game.h"
+#include"Player.h"
 
 namespace
 {
@@ -49,12 +50,21 @@ namespace
 	};
 }
 
-Bg::Bg() :
+Bg::Bg(Player* pPlayer) :
 	m_handle(-1),
 	m_graphChipNumX(0),
 	m_graphChipNumY(0)
 {
-	m_handle = LoadGraph("data/image/Bg.png");
+	m_player = pPlayer;
+	m_handle = LoadGraph("data/image/map.png");
+	
+	// 読み込んだグラフィックにチップが何個あるかを教えておく
+	int graphWidth = 0;
+	int graphHeight = 0;
+	GetGraphSize(m_handle, &graphWidth, &graphHeight);
+
+	m_graphChipNumX = graphWidth / kChipWidth;
+	m_graphChipNumY = graphWidth / kChipHeight;
 }
 
 Bg::~Bg()
@@ -62,19 +72,53 @@ Bg::~Bg()
 	DeleteGraph(m_handle);
 }
 
+void Bg::Init()
+{
+}
+
 void Bg::Update()
 {
+	m_player->GetLeft();
+	m_player->GetTop();
+	m_player->GetRight();
+	m_player->GetBottom();
 }
 
 void Bg::Draw()
 {
-	// グラフィックの表示
-	DrawGraph(0, 0, m_handle, true);
-
 	// マップチップを表示するテスト
-	DrawRectGraph(0, 0,   // 切り出したグラフィックをどこに表示するか
-		0, 0, 16, 16,     // グラフィックのどの部分を切り出すか
-		m_handle, true);
+	for (int y = 0; y < kChipNumY; y++)
+	{
+		for (int x = 0; x < kChipNumX; x++)
+		{
+			//データから配置するチップを決定する
+			int chipNo = kChipSetData[y][x];
+
+			if (chipNo < 0)
+			{
+				//continueは繰り返し分(for,while)の中で使用する命令
+				//continueが呼ばれたら以降の繰り返し処理は行わず、次のループに移行する
+				continue;
+			}
+
+			// 0から始まる通し番号を
+			// 上から何個目、左から何個目なのか、という情報に変換する必要がある
+			// グラフィックに何個チップが含まれているか、という情報を使用して
+			// 計算で求める
+			int indexX = chipNo % m_graphChipNumX; // 左から何個目のチップか
+			int indexY = chipNo / m_graphChipNumX; // 上から何個目のチップか
+
+			// チップ番号から切り出し位置を計算する
+			int cutX = indexX * kChipWidth;
+			int cutY = indexY * kChipHeight;
+
+			DrawRectGraph(x * kChipWidth, y * kChipHeight,
+				cutX, cutY, kChipWidth, kChipHeight,
+				m_handle, true);
+
+
+		}
+	}
 	//画面全体を空色で埋め尽くす
 	//DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(160, 216, 239), true);
 }

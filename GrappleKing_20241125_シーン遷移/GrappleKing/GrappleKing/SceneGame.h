@@ -16,6 +16,6 @@ public:
 
 private:
 
-	Player* m_pPlayer = new Player();
-	Bg m_bg;
+	Player* m_pPlayer;
+	Bg* m_bg;
 };
