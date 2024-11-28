@@ -76,9 +76,6 @@ void Player::Update()
 
 	m_totalFrame = kIdleAnimNum * kSingleAnimFrame;
 
-	//パッド対応させたいよ
-	int pad = GetJoypadInputState(DX_INPUT_KEY_PAD1);
-
 	// 矢印キーを押していたらプレイヤーを移動させる
 	if ((CheckHitKey(KEY_INPUT_LEFT) == 1) && m_isCanMove)
 	{
@@ -122,6 +119,10 @@ void Player::Update()
 		//地面の判定
 		m_pos.y = kDefaultY;
 	}
+	if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120)
+	{
+
+	}
 
 	if (m_pos.y >= kDefaultY)
 	{
@@ -145,15 +146,13 @@ void Player::Update()
 		m_linePos = m_pos;//ロープが伸び始める座標にプレイヤーの座標を代入する
 	}
 
-	//ロープが天井に着いたら
-	//ゴール以外は天井の当たり判定をなくす
-	if (((0 < m_pos.x && m_pos.x < 360) ||
-		(Game::kScreenWidth - 120 < m_pos.x && m_pos.x < Game::kScreenWidth))
+	//ロープが天井に着いたとき
+	if (((0 <= m_pos.x && m_pos.x <= 360) ||
+		(Game::kScreenWidth - 120 <= m_pos.x && m_pos.x <= Game::kScreenWidth))
 		&& m_linePos.y <= 50)
 	{
 		//これ以上伸ばさない
 		m_linePos.y = 50;
-		//m_isRopeMove = false;
 		//プレイヤーを動けるようにする
 		m_isCanMove = true;
 		//ボタンが押されるまではモーションを変えない
@@ -163,15 +162,26 @@ void Player::Update()
 		//ロープを登る
 		m_pos.y -= kSpeedUp;
 	}
+	else if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120 && m_linePos.y <= -50)
+	{
+		//これ以上伸ばさない
+		m_linePos.y = -50;
+		//ボタンが押されるまではモーションを変えない
+		m_useHandle = m_handleUp;
+		m_totalFrame = kUpAnimNum * kSingleAnimFrame;
+
+		//ロープを登る
+		m_pos.y -= kSpeedUp;
+	}
 
 	//画面外にいかないようにする
-	if (m_pos.x < 0 + kGraphWidth * 0.5f)
+	if (GetLeft() < 0)
 	{
-		m_pos.x = 0 + kGraphWidth * 0.5f;
+		m_pos.x = 0 + kGraphWidth * 0.36f;
 	}
-	if (Game::kScreenWidth - kGraphWidth * 0.5f < m_pos.x)
+	if (GetRight() < m_pos.x)
 	{
-		m_pos.x = Game::kScreenWidth - kGraphWidth * 0.5f;
+		m_pos.x = Game::kScreenWidth - kGraphWidth * 0.36f;
 	}
 	//天井にめりこまないようにすこしずらす
 	if (m_pos.y <= 50 + kGraphHeight * 0.4f)
@@ -192,8 +202,6 @@ void Player::Update()
 	{
 		m_animFrame = 0;
 	}
-
-
 }
 
 void Player::Draw()
@@ -207,10 +215,13 @@ void Player::Draw()
 		2.0, 0,
 		m_useHandle, true, m_isDirLeft);
 
-	//仮
+//仮
 	//天井
 	DrawLine(0, 50, 360, 50, 0xffffff, false);
 	DrawLine(Game::kScreenWidth - 120, 50, Game::kScreenWidth, 50, 0xffffff, false);
+	DrawBox(360, (50 + 360) * 0.5f + 10,
+		Game::kScreenWidth - 120, 360,
+		0xffffff, false);
 
 	//地面
 	DrawLine(0, 360, Game::kScreenWidth, 360, 0xffffff, false);
@@ -230,7 +241,7 @@ float Player::GetLeft() const
 
 float Player::GetTop() const
 {
-	return (m_pos.y - kGraphHeight * 0.36f);
+	return (m_pos.y - kGraphHeight * 0.4f);
 }
 
 float Player::GetRight() const

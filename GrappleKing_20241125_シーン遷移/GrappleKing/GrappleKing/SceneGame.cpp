@@ -3,9 +3,9 @@
 #include "DxLib.h"
 #include "Pad.h"
 #include "SceneTitle.h"
+#include "Bg.h"
 
-SceneGame::SceneGame(SceneController& cont):
-	Scene(cont)
+SceneGame::SceneGame(SceneController& cont):Scene(cont)
 {
 }
 
@@ -28,5 +28,6 @@ void SceneGame::Draw()
 {
 	DrawString(10, 10, "Game Scene", 0xffffff);
 
+	//m_bg.Draw();
 	m_pPlayer->Draw();
 }

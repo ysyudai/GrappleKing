@@ -1,12 +1,13 @@
 ﻿  Player.cpp
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(203,51): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(203,38): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(203,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(203,16): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(205,37): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(205,25): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(221,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(221,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(220,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(220,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  GrappleKing.vcxproj -> C:\Users\瀨戸雄大\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(209,51): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(209,38): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(209,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(209,16): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(211,37): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(211,25): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(220,33): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(230,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(230,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(229,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(229,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  GrappleKing.vcxproj -> C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe

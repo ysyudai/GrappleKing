@@ -1,0 +1,18 @@
+﻿  Application.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  SceneGame.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneGame.cpp(3,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  main.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\main.cpp(1,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  Bg.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Bg.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  Pad.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Pad.cpp(2,9): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  Player.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(1,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  Scene.cpp
+  SceneController.cpp
+  SceneSelectStage.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneSelectStage.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  SceneTitle.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
