@@ -17,6 +17,7 @@ SceneGame::~SceneGame()
 
 void SceneGame::Update()
 {
+	m_bg->Update();
 	m_pPlayer->Update();
 
 	if (Pad::IsTrigger(PAD_INPUT_1)) {
