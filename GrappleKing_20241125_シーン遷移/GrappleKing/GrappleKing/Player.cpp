@@ -4,6 +4,7 @@
 
 #include "Player.h"
 #include "Pad.h"
+#include "Bg.h"
 
 namespace
 {
@@ -67,7 +68,7 @@ Player::~Player()
 	DeleteGraph(m_handleUp);
 }
 
-void Player::Update()
+void Player::Update(Bg& bg)
 {
 	//前回のアニメーションの状態を覚えておく
 	int lastHandle = m_useHandle;
@@ -109,22 +110,17 @@ void Player::Update()
 	}
 
 	//重力
-	if (!m_isRopeMove)
+	if (!m_isRopeMove && !bg.m_isChipHit)
 	{
 		m_pos.y += kGravity;
 	}
 
-	if (m_pos.y >= kDefaultY)
-	{
-		//地面の判定
-		m_pos.y = kDefaultY;
-	}
 	if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120 && m_pos.y <= (50 + 360) * 0.5f)
 	{
 
 	}
 
-	if (m_pos.y >= kDefaultY)
+	if (bg.m_isChipHit)
 	{
 		m_isOnStage = true;
 	}
@@ -217,12 +213,6 @@ void Player::Draw()
 	//天井
 	DrawLine(0, 50, 360, 50, 0xffffff, false);
 	DrawLine(Game::kScreenWidth - 120, 50, Game::kScreenWidth, 50, 0xffffff, false);
-	DrawBox(360, (50 + 360) * 0.5f,
-		Game::kScreenWidth - 120, 360,
-		0xffffff, false);
-
-	//地面
-	DrawLine(0, 360, Game::kScreenWidth, 360, 0xffffff, false);
 
 #ifdef _DEBUG
 	//当たり判定のデバッグ表示

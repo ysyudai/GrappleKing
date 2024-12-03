@@ -18,7 +18,7 @@ SceneGame::~SceneGame()
 void SceneGame::Update()
 {
 	m_bg->Update();
-	m_pPlayer->Update();
+	m_pPlayer->Update(*m_bg);
 
 	if (Pad::IsTrigger(PAD_INPUT_1)) {
 		controller_.ChangeScene(std::make_shared<SceneSelectStage>(controller_));

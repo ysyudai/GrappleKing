@@ -62,7 +62,6 @@ void SceneTitle::Update()
 
 void SceneTitle::Draw()
 {
-
 	// 画面の中心出してるだけ
 	const Size& wsize = Application::GetInstance().GetWindowSize();
 	Position2 center = { static_cast<float>(wsize.w) * 0.5f, static_cast<float>(wsize.h) * 0.5f };
@@ -71,4 +70,6 @@ void SceneTitle::Draw()
 	// 実行
 	// これは画面効果とかの描画に使ったらいいかも
 	(this->*draw_) ();
+
+	
 }

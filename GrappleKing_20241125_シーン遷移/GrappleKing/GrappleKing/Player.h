@@ -1,13 +1,15 @@
 #pragma once
 #include "Vec2.h"
 
+class Bg;
+
 class Player
 {
 public:
 	Player();
 	~Player();
 
-	void Update();
+	void Update(Bg& bg);
 	void Draw();
 
 	//ƒvƒŒƒCƒ„[‚Ìî•ñ‚ğæ“¾‚·‚é
