@@ -54,9 +54,6 @@ void Application::Run()
 		ClearDrawScreen();
 
 		Pad::Update();
-		
-
-		// ‚±‚±‚ÉƒQ[ƒ€‚Ìˆ—‚ğ‘‚­
 
 		// ‚±‚Ìinput‚ğƒV[ƒ“ŠÔ‚Åó‚¯“n‚µ‘±‚¯‚Ä‚¢‚éŠ´‚¶‚©
 		sceneController.Update();

@@ -15,9 +15,11 @@ public:
 
 	bool m_isChipHit;
 
+	bool IsWallHit;
 private:
 	// グラフィックのハンドル
 	int m_handle;
+	int m_bgHandle;
 
 	// グラフィックにチップがいくつ含まれているか
 	int m_graphChipNumX;
@@ -25,5 +27,5 @@ private:
 
 	Player* m_player;
 
-	
+	void Map();
 };

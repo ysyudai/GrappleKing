@@ -33,13 +33,13 @@ namespace
 		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
-		{ 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{ 7, 7, 7, 7, 7,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
+		{29,29,29,29,29, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29},
 		{28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30},
 		{28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30},
 		{28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30},
@@ -52,6 +52,7 @@ namespace
 
 Bg::Bg(Player* pPlayer) :
 	m_handle(-1),
+	m_bgHandle(-1),
 	m_graphChipNumX(0),
 	m_graphChipNumY(0),
 	m_chipNo(0),
@@ -59,6 +60,7 @@ Bg::Bg(Player* pPlayer) :
 {
 	m_player = pPlayer;
 	m_handle = LoadGraph("data/image/map.png");
+	m_bgHandle = LoadGraph("data/image/background.png");
 	
 	// 読み込んだグラフィックにチップが何個あるかを教えておく
 	int graphWidth = 0;
@@ -78,70 +80,9 @@ void Bg::Update()
 {
 	m_isChipHit = false;
 
-	// マップチップを表示するテスト
-	for (int y = 0; y < kChipNumY; y++)
-	{
-		for (int x = 0; x < kChipNumX; x++)
-		{
-			//データから配置するチップを決定する
-			int chipNo = kChipSetData[y][x];
+	IsWallHit = false;
 
-			//if (chipNo < 0)
-			//{
-			//	//continueは繰り返し分(for,while)の中で使用する命令
-			//	//continueが呼ばれたら以降の繰り返し処理は行わず、次のループに移行する
-			//	continue;
-			//}
-
-			int GetChipLeft = x * kChipWidth;
-			int GetChipTop = y * kChipHeight;
-			int GetChipRight = x * kChipWidth + kChipWidth;
-			int GetChipBottom = y * kChipHeight + kChipHeight;
-
-			if (chipNo == 7)
-			{		
-				if (m_player->GetRight() < GetChipLeft || m_player->GetBottom() < GetChipTop||
-					GetChipRight < m_player->GetLeft() || GetChipBottom < m_player->GetTop())
-				{
-					DrawString(10, 160-16, "000\n", 0xffffff);
-				}
-				else
-				{
-					m_isChipHit = true;
-				}
-
-				/*if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth &&
-					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
-				{
-					DrawString(10,160,"hit\n",0xffffff);
-				}
-				if (x * kChipWidth < m_player->GetRight() && m_player->GetRight() < x * kChipWidth + kChipWidth &&
-					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
-				{
-					DrawString(10, 160, "hit\n", 0xffffff);
-				}
-				if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth&&
-					y * kChipHeight + kChipHeight < m_player->GetBottom() && m_player->GetBottom() < y * kChipHeight)
-				{
-					
-				}*/
-			}
-			if (chipNo == 29)
-			{
-				if (m_player->GetRight() < GetChipLeft || m_player->GetBottom() < GetChipTop ||
-					GetChipRight < m_player->GetLeft() || GetChipBottom < m_player->GetTop())
-				{
-					//DrawString(10, 160 - 16, "000\n", 0xffffff);
-				}
-				else
-				{
-					//DrawString(10, 160, "hit\n", 0xffffff);
-
-
-				}
-			}
-		}
-	}
+	Map();	
 }
 
 void Bg::Draw()
@@ -179,4 +120,84 @@ void Bg::Draw()
 	}
 	//画面全体を空色で埋め尽くす
 	//DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(160, 216, 239), true);
+}
+
+void Bg::Map()
+{
+	// マップチップを表示するテスト
+	for (int y = 0; y < kChipNumY; y++)
+	{
+		for (int x = 0; x < kChipNumX; x++)
+		{
+			//データから配置するチップを決定する
+			int chipNo = kChipSetData[y][x];
+
+			if (chipNo < 0)
+			{
+				//continueは繰り返し分(for,while)の中で使用する命令
+				//continueが呼ばれたら以降の繰り返し処理は行わず、次のループに移行する
+				continue;
+			}
+
+			int GetChipLeft = x * kChipWidth;
+			int GetChipTop = y * kChipHeight;
+			int GetChipRight = x * kChipWidth + kChipWidth;
+			int GetChipBottom = y * kChipHeight + kChipHeight;
+
+			//フラグ判定
+			bool isPlayerLeft = (m_player->GetRight() < GetChipLeft);//Playerがチップの左側にいる
+			bool isPlayerRight = (GetChipRight < m_player->GetLeft());//Playerがチップの右側にいる。
+			bool isPlayerTop = (m_player->GetBottom() < GetChipTop);//Playerがチップの上にいる。
+			bool isPlayerBottom = (GetChipBottom < m_player->GetTop());//Playerがチップの下にいる。		
+
+			//地面に当たった時(7は地面)
+			if (chipNo == 7)
+			{
+				if (!(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
+				{
+					m_isChipHit = true;
+
+					Vec2 NextPos = m_player->GetPos();
+					NextPos.y = GetChipTop + (m_player->GetBottom() - m_player->GetPos().y);
+					m_player->SetPos(NextPos);
+				}
+
+				/*if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth &&
+					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
+				{
+					DrawString(10,160,"hit\n",0xffffff);
+				}
+				if (x * kChipWidth < m_player->GetRight() && m_player->GetRight() < x * kChipWidth + kChipWidth &&
+					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
+				{
+					DrawString(10, 160, "hit\n", 0xffffff);
+				}
+				if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth&&
+					y * kChipHeight + kChipHeight < m_player->GetBottom() && m_player->GetBottom() < y * kChipHeight)
+				{
+
+				}*/
+			}
+			//壁に当たった時(29は壁)
+			if (chipNo == 29)
+			{
+				//右に壁がある場合
+				if ((m_player->LastPos.x < GetChipLeft) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
+				{
+					IsWallHit = true;
+					Vec2 NextPos = m_player->GetPos();
+					NextPos.x = GetChipLeft - (m_player->GetRight() - m_player->GetPos().x) - 0.001f;
+					m_player->SetPos(NextPos);
+				}
+				//左に壁がある場合
+				if ((GetChipRight < m_player->LastPos.x) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
+				{
+					IsWallHit = true;
+					Vec2 NextPos = m_player->GetPos();
+					NextPos.x = GetChipRight + (m_player->GetRight() - m_player->GetPos().x) + 0.001f;
+					m_player->SetPos(NextPos);
+				}
+			}
+		}
+	}
 }

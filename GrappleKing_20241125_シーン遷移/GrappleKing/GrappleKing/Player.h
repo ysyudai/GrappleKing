@@ -18,6 +18,18 @@ public:
 	float GetRight() const;
 	float GetBottom() const;
 
+	Vec2 GetPos() const;
+
+	//プレイヤーの情報を変更する
+	void SetPos(const Vec2 pos);
+
+	//1フレーム前のプレイヤーの座標を覚えておく
+	Vec2 LastPos;
+
+	bool IsClear;
+
+	Vec2 Velocity;
+
 private:
 	//現在のハンドル
 	int m_useHandle;
@@ -31,6 +43,8 @@ private:
 
 	//全体フレーム
 	int m_totalFrame;
+
+	void Action();
 
 	//現在再生中のアニメーション
 	//true:走っている　false:待機
@@ -56,4 +70,6 @@ private:
 
 	//ロープが伸び始める座標
 	Vec2 m_linePos;
+
+	void Gravity(Bg& bg);
 };

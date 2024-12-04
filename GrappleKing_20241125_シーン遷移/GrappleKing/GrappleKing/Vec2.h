@@ -18,4 +18,45 @@ public:
 		y(_y)
 	{
 	}
+
+	/*演算子オーバーロード*/
+	//単項演算子
+	Vec2 operator+(const Vec2& right)
+	{
+		Vec2 ans;
+		ans.x = this->x + right.x;
+		ans.y = this->y + right.y;		
+		return ans;
+	}
+	Vec2 operator-(const Vec2& right)
+	{
+		Vec2 ans;
+		ans.x = this->x - right.x;
+		ans.y = this->y - right.y;
+		return ans;
+	}
+	Vec2 operator*(const float& right)
+	{
+		Vec2 ans;
+		ans.x = this->x * right;
+		ans.y = this->y * right;
+		return ans;
+	}
+	Vec2 operator/(const float& right)
+	{
+		Vec2 ans;
+		ans.x = this->x / right;
+		ans.y = this->y / right;
+		return ans;
+	}
+	void operator+=(const Vec2& right)
+	{
+		this->x += right.x;
+		this->y += right.y;
+	}
+	void operator-=(const Vec2& right)
+	{
+		this->x -= right.x;
+		this->y -= right.y;
+	}
 };
