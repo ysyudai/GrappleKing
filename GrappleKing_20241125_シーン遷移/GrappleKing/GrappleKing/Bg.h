@@ -16,6 +16,16 @@ public:
 	bool m_isChipHit;
 
 	bool IsWallHit;
+
+	int GetChipLeft()const { return m_ChipLeft; }
+	int GetChipRight()const { return m_ChipRight; }
+	int GetChipTop()const { return m_ChipTop; }
+	int GetChipBottom()const { return m_ChipBottom; }
+
+	int GetChipTopGround()const { return m_chipTopGround; }
+	int GetChipTopWall()const { return m_chipLeftWall; }
+	int GetChipTopWall()const { return m_chipRightWall; }
+
 private:
 	// グラフィックのハンドル
 	int m_handle;
@@ -28,4 +38,13 @@ private:
 	Player* m_player;
 
 	void Map();
+
+	int m_ChipLeft;
+	int m_ChipRight;
+	int m_ChipTop;
+	int m_ChipBottom;
+
+	int m_chipTopGround;
+	int m_chipLeftWall;
+	int m_chipRightWall;
 };

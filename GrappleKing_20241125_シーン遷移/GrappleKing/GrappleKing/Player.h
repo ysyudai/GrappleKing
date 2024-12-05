@@ -30,6 +30,9 @@ public:
 
 	Vec2 Velocity;
 
+	void OnGround(Bg& bg);
+	void IntoWall(Bg& bg);
+
 private:
 	//現在のハンドル
 	int m_useHandle;
@@ -44,7 +47,7 @@ private:
 	//全体フレーム
 	int m_totalFrame;
 
-	void Action();
+	void Action(Bg& bg);
 
 	//現在再生中のアニメーション
 	//true:走っている　false:待機

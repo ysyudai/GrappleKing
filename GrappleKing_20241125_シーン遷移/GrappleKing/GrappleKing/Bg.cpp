@@ -56,7 +56,8 @@ Bg::Bg(Player* pPlayer) :
 	m_graphChipNumX(0),
 	m_graphChipNumY(0),
 	m_chipNo(0),
-	m_isChipHit(false)
+	m_isChipHit(false),
+	IsWallHit(false)
 {
 	m_player = pPlayer;
 	m_handle = LoadGraph("data/image/map.png");
@@ -139,16 +140,16 @@ void Bg::Map()
 				continue;
 			}
 
-			int GetChipLeft = x * kChipWidth;
-			int GetChipTop = y * kChipHeight;
-			int GetChipRight = x * kChipWidth + kChipWidth;
-			int GetChipBottom = y * kChipHeight + kChipHeight;
+			m_ChipLeft = x * kChipWidth;
+			m_ChipTop = y * kChipHeight;
+			m_ChipRight = x * kChipWidth + kChipWidth;
+			m_ChipBottom = y * kChipHeight + kChipHeight;
 
 			//フラグ判定
-			bool isPlayerLeft = (m_player->GetRight() < GetChipLeft);//Playerがチップの左側にいる
-			bool isPlayerRight = (GetChipRight < m_player->GetLeft());//Playerがチップの右側にいる。
-			bool isPlayerTop = (m_player->GetBottom() < GetChipTop);//Playerがチップの上にいる。
-			bool isPlayerBottom = (GetChipBottom < m_player->GetTop());//Playerがチップの下にいる。		
+			bool isPlayerLeft = (m_player->GetRight() <m_ChipLeft);//Playerがチップの左側にいる
+			bool isPlayerRight = (m_ChipRight < m_player->GetLeft());//Playerがチップの右側にいる。
+			bool isPlayerTop = (m_player->GetBottom() <m_ChipTop);//Playerがチップの上にいる。
+			bool isPlayerBottom = (m_ChipBottom < m_player->GetTop());//Playerがチップの下にいる。		
 
 			//地面に当たった時(7は地面)
 			if (chipNo == 7)
@@ -157,9 +158,14 @@ void Bg::Map()
 				{
 					m_isChipHit = true;
 
-					Vec2 NextPos = m_player->GetPos();
-					NextPos.y = GetChipTop + (m_player->GetBottom() - m_player->GetPos().y);
-					m_player->SetPos(NextPos);
+					//当たった床の高さを記録
+					m_chipTopGround = m_ChipTop;
+
+					//m_player->OnGround(m_ChiipTop);
+
+					/*Vec2 NextPos = m_player->GetPos();
+					NextPos.y =m_ChiipTop + (m_player->GetBottom() - m_player->GetPos().y);
+					m_player->SetPos(NextPos);*/
 				}
 
 				/*if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth &&
@@ -182,19 +188,24 @@ void Bg::Map()
 			if (chipNo == 29)
 			{
 				//右に壁がある場合
-				if ((m_player->LastPos.x < GetChipLeft) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
+				if ((m_player->LastPos.x <m_ChiipLeft) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
 				{
+					//当たった壁のX座標を記録
+					m_chipLeftWall = m_hipLeft
+
 					IsWallHit = true;
 					Vec2 NextPos = m_player->GetPos();
-					NextPos.x = GetChipLeft - (m_player->GetRight() - m_player->GetPos().x) - 0.001f;
+					NextPos.x =m_ChiipLeft - (m_player->GetRight() - m_player->GetPos().x) - 0.001f;
 					m_player->SetPos(NextPos);
 				}
 				//左に壁がある場合
-				if ((GetChipRight < m_player->LastPos.x) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
+				if ((m_ChiipRight < m_player->LastPos.x) && !(isPlayerLeft || isPlayerRight || isPlayerTop || isPlayerBottom))
 				{
+					//当たった壁のX座標を記録
+
 					IsWallHit = true;
 					Vec2 NextPos = m_player->GetPos();
-					NextPos.x = GetChipRight + (m_player->GetRight() - m_player->GetPos().x) + 0.001f;
+					NextPos.x =m_ChiipRight + (m_player->GetRight() - m_player->GetPos().x) + 0.001f;
 					m_player->SetPos(NextPos);
 				}
 			}

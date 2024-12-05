@@ -1,5 +1,6 @@
 #include "DxLib.h"
 #include "game.h"
+#include <cmath>
 #include<cassert>
 
 #include "Player.h"
@@ -13,8 +14,8 @@ namespace
 	constexpr int kGraphHeight = 64;
 
 	//キャラクターの初期座標
-	constexpr float kDefaultX = Game::kScreenWidth * 0.2f;
-	constexpr float kDefaultY = 360;
+	constexpr float kDefaultX = 200;
+	constexpr float kDefaultY = 320;
 
 	////アニメーションのコマ数
 	constexpr int kIdleAnimNum = 4;
@@ -32,7 +33,7 @@ namespace
 	constexpr float kSpeedRope = 10.0f;
 
 	//重力
-	constexpr float kGravity = 1.0f;
+	constexpr float kGravity = 10.0f;
 }
 
 Player::Player() :
@@ -73,7 +74,11 @@ Player::~Player()
 
 void Player::Update(Bg& bg)
 {
+	
 	Velocity.x = 0;
+
+	
+
 	//前回のアニメーションの状態を覚えておく
 	int lastHandle = m_useHandle;
 
@@ -84,19 +89,9 @@ void Player::Update(Bg& bg)
 	//1フレーム前のプレイヤーの座標を覚えておく
 	LastPos = m_pos;
 
-	Action();
+	Action(bg);
 
 	Gravity(bg);
-	
-	//地面に当たっているかどうか
-	if (bg.m_isChipHit)
-	{
-		m_isOnStage = true;
-	}
-	else
-	{
-		m_isOnStage = false;
-	}	
 	
 	m_animFrame++;
 
@@ -110,9 +105,17 @@ void Player::Update(Bg& bg)
 	if (lastHandle != m_useHandle)
 	{
 		m_animFrame = 0;
+	}	
+
+	if (bg.m_isChipHit && !m_isRopeMove)
+	{
+		OnGround(bg);
 	}
-	
+	//壁に当たった時の処理
+
+
 	m_pos += Velocity;
+	
 }
 
 void Player::Draw()
@@ -169,8 +172,10 @@ void Player::SetPos(const Vec2 pos)
 	m_pos = pos;
 }
 
-void Player::Action()
+void Player::Action(Bg& bg)
 {
+
+
 	// 矢印キーを押していたらプレイヤーを移動させる
 	if ((CheckHitKey(KEY_INPUT_LEFT) == 1) && m_isCanMove)
 	{
@@ -192,7 +197,7 @@ void Player::Action()
 		m_totalFrame = kRunAnimNum * kSingleAnimFrame;
 
 	}
-	if ((CheckHitKey(KEY_INPUT_UP) == 1) && !m_isRopeMove && m_isOnStage)
+	if ((CheckHitKey(KEY_INPUT_UP) == 1) && !m_isRopeMove && bg.m_isChipHit)
 	{
 		m_isCanMove = false;
 		if (!(m_linePos.y <= 50))
@@ -252,6 +257,8 @@ void Player::Action()
 		}
 	}
 
+	
+
 	//画面外にいかないようにする
 	if (GetLeft() < 0)
 	{
@@ -269,7 +276,7 @@ void Player::Gravity(Bg& bg)
 	//重力
 	if (!m_isRopeMove && !bg.m_isChipHit)
 	{
-		Velocity.y += kGravity;
+		Velocity.y = kGravity;
 	}
 	else
 	{
@@ -280,4 +287,16 @@ void Player::Gravity(Bg& bg)
 		Velocity.x = 0;
 
 	}
+}
+
+void Player::OnGround(Bg& bg)
+{
+	Vec2 NextPos = m_pos;
+	NextPos.y = bg.GetChipTopGround();
+	m_pos=NextPos;
+	Velocity.y = 0;
+}
+
+void Player::IntoWall(Bg& bg)
+{
 }

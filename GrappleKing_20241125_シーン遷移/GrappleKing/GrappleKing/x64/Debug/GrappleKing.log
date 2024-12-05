@@ -1,16 +1,14 @@
-﻿  Bg.cpp
-  Player.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(122,51): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(122,38): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(122,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(122,16): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(124,37): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(124,25): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(136,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(136,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  SceneGame.cpp
-  SceneTitle.cpp
-  コードを生成中...
+﻿  Player.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,51): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,38): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,28): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(137,16): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(139,37): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(139,25): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(152,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(152,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(151,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(151,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(307,33): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(312,27): warning C4100: 'bg': 引数は関数の本体部で 1 度も参照されません。
   GrappleKing.vcxproj -> C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe
