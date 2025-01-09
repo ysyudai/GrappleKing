@@ -18,6 +18,7 @@ public:
 	float GetRight() const;
 	float GetBottom() const;
 
+	//プレイヤーの座標を取得
 	Vec2 GetPos() const;
 
 	//プレイヤーの情報を変更する
@@ -26,6 +27,10 @@ public:
 	//1フレーム前のプレイヤーの座標を覚えておく
 	Vec2 LastPos;
 
+	//ロープが伸び始める座標
+	Vec2 LinePos;
+
+	//クリア
 	bool IsClear;
 
 	Vec2 Velocity;
@@ -68,11 +73,9 @@ private:
 	//true:ついた　false:まだ
 	bool m_isCanMove;
 
-	//地面についているかどうか
-	bool m_isOnStage;
-
-	//ロープが伸び始める座標
-	Vec2 m_linePos;
-
+	//重力の処理
 	void Gravity(Bg& bg);
+
+	//ロープの処理
+	void RopeMove(Bg& bg);
 };

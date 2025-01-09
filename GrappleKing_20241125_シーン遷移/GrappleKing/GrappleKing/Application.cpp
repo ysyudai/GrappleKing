@@ -7,7 +7,7 @@
 #include "Pad.h"
 
 Application::Application() :
-	windowSize_({ 640, 480 })
+	windowSize_({ Game::kScreenWidth , Game::kScreenHeight })
 {
 
 }

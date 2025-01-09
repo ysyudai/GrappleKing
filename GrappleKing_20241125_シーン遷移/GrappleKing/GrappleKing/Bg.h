@@ -17,14 +17,17 @@ public:
 
 	bool IsWallHit;
 
-	int GetChipLeft()const { return m_ChipLeft; }
-	int GetChipRight()const { return m_ChipRight; }
-	int GetChipTop()const { return m_ChipTop; }
-	int GetChipBottom()const { return m_ChipBottom; }
+	bool IsCeilingHit;
+
+	int GetChipLeft()const { return m_chipLeft; }
+	int GetChipRight()const { return m_chipRight; }
+	int GetChipTop()const { return m_chipTop; }
+	int GetChipBottom()const { return m_chipBottom; }
 
 	int GetChipTopGround()const { return m_chipTopGround; }
-	int GetChipTopWall()const { return m_chipLeftWall; }
-	int GetChipTopWall()const { return m_chipRightWall; }
+	int GetChipLeftWall()const { return m_chipLeftWall; }
+	int GetChipRightWall()const { return m_chipRightWall; }
+	int GetChipBottomCeiling()const { return m_chipBottomCeiling; }
 
 private:
 	// グラフィックのハンドル
@@ -39,12 +42,16 @@ private:
 
 	void Map();
 
-	int m_ChipLeft;
-	int m_ChipRight;
-	int m_ChipTop;
-	int m_ChipBottom;
+	int m_chipLeft;
+	int m_chipRight;
+	int m_chipTop;
+	int m_chipBottom;
 
 	int m_chipTopGround;
 	int m_chipLeftWall;
 	int m_chipRightWall;
+	int m_chipBottomCeiling;
+	
+	bool m_isStage1;
+	bool m_isStage2;
 };

@@ -1,15 +1,14 @@
 #include "SceneController.h"
 #include <memory>
-// 継承元の関数も認識してくれるのか
-// まあヘッダの内容をそのまま付け足しているだけだし
-// 継承も同じだし
 #include "SceneTitle.h"
+#include "SceneGame.h"
 
 SceneController::SceneController()
 {
 	// 一番最初のシーンだけは割り当てる
 	// 自分自身のインスタンスを渡してあげる
-	ChangeScene(std::make_shared<SceneTitle>(*this));
+	//ChangeScene(std::make_shared<SceneTitle>(*this));
+	ChangeScene(std::make_shared<SceneGame>(*this));
 }
 
 void SceneController::Update()
