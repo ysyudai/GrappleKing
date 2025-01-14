@@ -2,7 +2,7 @@
 
 #include "SceneController.h"
 #include "Player.h"
-#include "Bg.h"
+#include "Map.h"
 #include "Scene.h"
 
 class SceneGame:public Scene
@@ -17,5 +17,5 @@ public:
 private:
 
 	Player* m_pPlayer;
-	Bg* m_bg;
+	Map* m_Map;
 };

@@ -5,7 +5,7 @@
 
 #include "Player.h"
 #include "Pad.h"
-#include "Bg.h"
+#include "Map.h"
 
 namespace
 {
@@ -28,7 +28,7 @@ namespace
 	//キャラクターの移動速度
 	constexpr float kSpeed = 4.0f;
 	//ロープを登る速度
-	constexpr float kSpeedUp = 8.0f;
+	constexpr float kSpeedUp = 18.0f;
 	//ロープが延びる速度
 	constexpr float kSpeedRope = 10.0f;
 
@@ -49,7 +49,6 @@ Player::Player() :
 	m_isCanMove(true),
 	LinePos(m_pos),
 	LastPos(m_pos),
-	IsClear(false),
 	Velocity(0.0f,0.0f)
 {
 	m_handleIdle = LoadGraph("data/Flog/idle.png");
@@ -71,8 +70,13 @@ Player::~Player()
 	DeleteGraph(m_handleUp);
 }
 
-void Player::Update(Bg& bg)
+void Player::Update(Map& map)
 {	
+	if (Pad::IsTrigger(PAD_INPUT_2))
+	{
+		m_pos = { Game::kScreenWidth - kDefaultX,Game::kScreenHeight - kDefaultY };
+	}
+
 	Velocity.x = 0;	
 
 	//前回のアニメーションの状態を覚えておく
@@ -85,9 +89,9 @@ void Player::Update(Bg& bg)
 	//1フレーム前のプレイヤーの座標を覚えておく
 	LastPos = m_pos;
 
-	Action(bg);
+	Action(map);
 
-	Gravity(bg);
+	Gravity(map);
 	
 	m_animFrame++;
 
@@ -103,9 +107,10 @@ void Player::Update(Bg& bg)
 		m_animFrame = 0;
 	}	
 
-	if (bg.m_isChipHit && !m_isRopeMove)
+	//地面にいるとき
+	if (map.m_isGroundHit && !m_isRopeMove && !map.IsCeilingHit)
 	{
-		OnGround(bg);
+		OnGround(map);
 	}
 	//壁に当たった時の処理
 
@@ -117,17 +122,18 @@ void Player::Draw()
 {
 	int animNo = m_animFrame / kSingleAnimFrame;
 	//ロープの描画
-	DrawLine(m_pos.x, m_pos.y - 1, m_pos.x, LinePos.y, 0xffffff, 0);
+	DrawLine(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y - 1),
+		static_cast<int>(m_pos.x), static_cast<int>(LinePos.y), 0xffffff, 0);
 	//プレイヤーの描画
-	DrawRectRotaGraph(m_pos.x, m_pos.y - kGraphHeight * 0.25f,
+	DrawRectRotaGraph(static_cast<int>(m_pos.x), static_cast<int>(m_pos.y - kGraphHeight * 0.25f),
 		animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 		2.0, 0,
 		m_useHandle, true, m_isDirLeft);
 
 #ifdef _DEBUG
 	//当たり判定のデバッグ表示
-	DrawBox(GetLeft(), GetTop(),
-		GetRight(), GetBottom(),
+	DrawBox(static_cast<int>(GetLeft()), static_cast<int>(GetTop()),
+		static_cast<int>(GetRight()), static_cast<int>(GetBottom()),
 		0xff0000, false);
 #endif
 }
@@ -162,7 +168,7 @@ void Player::SetPos(const Vec2 pos)
 	m_pos = pos;
 }
 
-void Player::Action(Bg& bg)
+void Player::Action(Map& map)
 {
 	// 矢印キーを押していたらプレイヤーを移動させる
 	if ((CheckHitKey(KEY_INPUT_LEFT) == 1) && m_isCanMove)
@@ -173,7 +179,7 @@ void Player::Action(Bg& bg)
 		m_useHandle = m_handleRun;
 		LinePos.y = m_pos.y;
 		m_totalFrame = kRunAnimNum * kSingleAnimFrame;
-
+		map.IsCeilingHit = false;
 	}
 	if ((CheckHitKey(KEY_INPUT_RIGHT) == 1) && m_isCanMove)
 	{
@@ -183,17 +189,19 @@ void Player::Action(Bg& bg)
 		m_useHandle = m_handleRun;
 		LinePos.y = m_pos.y;
 		m_totalFrame = kRunAnimNum * kSingleAnimFrame;
-
+		map.IsCeilingHit = false;
 	}
-	if ((CheckHitKey(KEY_INPUT_UP) == 1) && !m_isRopeMove && bg.m_isChipHit)
+	if ((CheckHitKey(KEY_INPUT_UP) == 1) && !m_isRopeMove && map.m_isGroundHit)
 	{
 		m_isCanMove = false;
-		if (!(LinePos.y <= 50))
+		if (!(LinePos.y <= map.GetChipBottomCeiling()))
 		{
 			LinePos = m_pos;//ロープが伸び始める座標にプレイヤーの座標を代入する
 		}
 
-		m_isRopeMove = true;//現在ロープが伸びている		
+		m_isRopeMove = true;//現在ロープが伸びている	
+
+		//map.m_isGroundHit = false;
 	}
 
 	//ロープが伸びているときの処理
@@ -206,17 +214,19 @@ void Player::Action(Bg& bg)
 	}
 	else
 	{
+		m_isCanMove = true;
+		//LinePos.y -= kSpeedRope;
 		LinePos = m_pos;//ロープが伸び始める座標にプレイヤーの座標を代入する
 	}
 	
 	//ロープが天井に着いたとき
-	if (bg.IsCeilingHit)
+	if (map.IsCeilingHit)
 	{
-		RopeMove(bg);
+		RopeMove(map);
 	}
 	
-	//goal
-	if (360 < m_pos.x && m_pos.x < Game::kScreenWidth - 120 && LinePos.y <= -50)
+	//クリアしたとき
+	if (LinePos.y <= -50)
 	{
 		//これ以上伸ばさない
 		LinePos.y = -50;
@@ -227,14 +237,38 @@ void Player::Action(Bg& bg)
 		//画面外(上)に行くとクリア
 		if (m_pos.y < -50)
 		{
-			IsClear = true;
+			m_isRun = false;
+			m_isDirLeft = true;
+			m_isRopeMove = false;
+			m_isCanMove = false;
+			LinePos = m_pos;
+			map.m_isGroundHit = false;
+			map.IsWallHit = false;
+			map.IsCeilingHit = false;
+			
+			if (map.IsStage1)
+			{
+				map.IsStage1 = false;
+				map.IsStage2 = true;
 
-			m_pos = { kDefaultX,kDefaultY };
+				m_pos = { Game::kScreenWidth - kDefaultX,kDefaultY };
+			}
+			else if (map.IsStage2)
+			{
+				map.IsStage2 = false;
+				map.IsStage3 = true;
+
+				m_pos = { Game::kScreenWidth * 0.5f ,kDefaultY };
+			}
+			else if (map.IsStage3)
+			{
+
+			}
 		}
 	}
 		
 
-	//画面外にいかないようにする
+	//画面外(左右)にいかないようにする
 	if (GetLeft() < 0)
 	{
 		m_pos.x = 0 + kGraphWidth * 0.36f;
@@ -245,10 +279,10 @@ void Player::Action(Bg& bg)
 	}
 }
 
-void Player::Gravity(Bg& bg)
+void Player::Gravity(Map& map)
 {
 	//重力
-	if (!m_isRopeMove && !bg.m_isChipHit)
+	if (!m_isRopeMove && !map.m_isGroundHit)
 	{
 		Velocity.y = kGravity;
 	}
@@ -256,21 +290,21 @@ void Player::Gravity(Bg& bg)
 	{
 		Velocity.y = 0;
 	}
-	if (bg.IsWallHit)
+	if (map.IsWallHit)
 	{
 		Velocity.x = 0;
 	}
 }
 
-void Player::RopeMove(Bg& bg)
+void Player::RopeMove(Map& map)
 {
 	//これ以上伸ばさない
-	LinePos.y = bg.GetChipBottomCeiling();
+	LinePos.y = static_cast<float>(map.GetChipBottomCeiling());
 
 	m_isRopeMove = false;
 	
 	//プレイヤーを動けるようにする
-	m_isCanMove = true;
+	//m_isCanMove = true;
 
 	//ボタンが押されるまではモーションを変えない
 	m_useHandle = m_handleUp;
@@ -279,21 +313,21 @@ void Player::RopeMove(Bg& bg)
 	//ロープを登る
 	m_pos.y -= kSpeedUp;
 
-	//天井にめりこまないようにすこしずらす
-	if (m_pos.y <= bg.GetChipBottomCeiling() + kGraphHeight * 0.4f)
+	//天井にくっつかせる
+	if (m_pos.y <= map.GetChipBottomCeiling() + kGraphHeight * 0.2f)
 	{
-		m_pos.y = bg.GetChipBottomCeiling() + kGraphHeight * 0.4f;
+		m_pos.y = map.GetChipBottomCeiling() + kGraphHeight * 0.2f;
 	}
 }
 
-void Player::OnGround(Bg& bg)
+void Player::OnGround(Map& map)
 {
 	Vec2 NextPos = m_pos;
-	NextPos.y = bg.GetChipTopGround();
+	NextPos.y = static_cast<float>(map.GetChipTopGround());
 	m_pos=NextPos;
 	Velocity.y = 0;
 }
 
-void Player::IntoWall(Bg& bg)
+void Player::IntoWall(Map& map)
 {
 }

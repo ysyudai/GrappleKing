@@ -1,7 +1,7 @@
 #pragma once
 #include "Vec2.h"
 
-class Bg;
+class Map;
 
 class Player
 {
@@ -9,7 +9,7 @@ public:
 	Player();
 	~Player();
 
-	void Update(Bg& bg);
+	void Update(Map& map);
 	void Draw();
 
 	//プレイヤーの情報を取得する
@@ -30,13 +30,10 @@ public:
 	//ロープが伸び始める座標
 	Vec2 LinePos;
 
-	//クリア
-	bool IsClear;
-
 	Vec2 Velocity;
 
-	void OnGround(Bg& bg);
-	void IntoWall(Bg& bg);
+	void OnGround(Map& map);
+	void IntoWall(Map& map);
 
 private:
 	//現在のハンドル
@@ -52,7 +49,7 @@ private:
 	//全体フレーム
 	int m_totalFrame;
 
-	void Action(Bg& bg);
+	void Action(Map& map);
 
 	//現在再生中のアニメーション
 	//true:走っている　false:待機
@@ -74,8 +71,8 @@ private:
 	bool m_isCanMove;
 
 	//重力の処理
-	void Gravity(Bg& bg);
+	void Gravity(Map& map);
 
 	//ロープの処理
-	void RopeMove(Bg& bg);
+	void RopeMove(Map& map);
 };
