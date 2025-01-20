@@ -1,18 +1,32 @@
 ﻿  Application.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(69,40): warning C4244: '引数': 'uint64_t' から 'DWORD' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Application.cpp(71,28): warning C4244: '=': 'ULONGLONG' から 'int' への変換です。データが失われる可能性があります。
   SceneGame.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneGame.cpp(3,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
   main.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\main.cpp(1,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
-  Bg.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Bg.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  Map.cpp
   Pad.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Pad.cpp(2,9): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
   Player.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(1,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
   Scene.cpp
   SceneController.cpp
-  SceneSelectStage.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneSelectStage.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+  SceneResult.cpp
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(86,74): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(87,89): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(87,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(92,130): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(93,80): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(93,39): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneResult.cpp(110,18): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
   SceneTitle.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(2,10): fatal error C1083: include ファイルを開けません。'DxLib.h':No such file or directory
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(53,27): warning C4244: '=': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(68,71): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(70,89): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(70,48): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(119,42): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(134,116): warning C4267: '引数': 'size_t' から 'int' に変換しました。データが失われているかもしれません。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(135,80): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\SceneTitle.cpp(135,39): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 225 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  GrappleKing.vcxproj -> C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Release\GrappleKing.exe

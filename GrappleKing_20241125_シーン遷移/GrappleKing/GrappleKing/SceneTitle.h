@@ -1,11 +1,24 @@
 #pragma once
 #include "Scene.h"
 
+
 /// <summary>
 /// タイトルシーン
 /// </summary>
 class SceneTitle : public Scene
 {
+public:
+	SceneTitle(SceneController& cont);
+	virtual ~SceneTitle()override;
+	/// <summary>
+	/// 派生クラスで実装を実装
+	/// virtual はこれを継承するかもしれないから、
+	/// overrideは明示的にオーバーライドをエディタに示すため
+	/// </summary>
+	virtual void Update() override;
+
+	virtual void Draw() override;
+
 private:
 	int frame_ = 0;
 	// 背景
@@ -28,16 +41,9 @@ private:
 	void FadeDraw();
 	void NormalDraw();
 
-public:
-	SceneTitle(SceneController& cont);
-	virtual ~SceneTitle()override;
-	/// <summary>
-	/// 派生クラスで実装を実装
-	/// virtual はこれを継承するかもしれないから、
-	/// overrideは明示的にオーバーライドをエディタに示すため
-	/// </summary>
-	virtual void Update() override;
+	//"ボタンを押して下さい"を点滅させるためのフレームカウント
+	int m_blinkFrameCount;
 
-	virtual void Draw() override;
+	int y;
 };
 
