@@ -33,7 +33,8 @@ public:
 	Vec2 Velocity;
 
 	void OnGround(Map& map);
-	void IntoWall(Map& map);
+
+	bool IsClear() const{ return m_isClear; }
 
 private:
 	//現在のハンドル
@@ -75,4 +76,6 @@ private:
 
 	//ロープの処理
 	void RopeMove(Map& map);
+
+	bool m_isClear;
 };

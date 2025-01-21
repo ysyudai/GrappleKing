@@ -20,7 +20,8 @@ void SceneGame::Update()
 	m_Map->Update();
 	m_pPlayer->Update(*m_Map);
 	
-	if (Pad::IsTrigger(PAD_INPUT_1)) {
+	//if (Pad::IsTrigger(PAD_INPUT_1)) {
+	if (m_pPlayer->IsClear()) {
 		controller_.ChangeScene(std::make_shared<SceneResult>(controller_));
 		
 		return;

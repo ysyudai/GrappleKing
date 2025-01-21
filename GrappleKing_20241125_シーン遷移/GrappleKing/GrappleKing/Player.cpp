@@ -49,7 +49,8 @@ Player::Player() :
 	m_isCanMove(true),
 	LinePos(m_pos),
 	LastPos(m_pos),
-	Velocity(0.0f,0.0f)
+	Velocity(0.0f,0.0f),
+	m_isClear(false)
 {
 	m_handleIdle = LoadGraph("data/Flog/idle.png");
 	assert(m_handleIdle != -1);
@@ -262,7 +263,7 @@ void Player::Action(Map& map)
 			}
 			else if (map.IsStage3)
 			{
-
+				m_isClear = true;
 			}
 		}
 	}
@@ -326,8 +327,4 @@ void Player::OnGround(Map& map)
 	NextPos.y = static_cast<float>(map.GetChipTopGround());
 	m_pos=NextPos;
 	Velocity.y = 0;
-}
-
-void Player::IntoWall(Map& map)
-{
 }

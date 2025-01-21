@@ -203,6 +203,8 @@ Map::Map(Player* pPlayer) :
 Map::~Map()
 {
 	DeleteGraph(m_handle);
+	DeleteGraph(m_mapHandle);
+	DeleteGraph(m_d_padHandle);
 }
 
 void Map::Update()
@@ -218,6 +220,9 @@ void Map::Draw()
 {
 	//画面全体を空色で埋め尽くす
 	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(160, 216, 239), true);
+
+	//雲を表示
+
 	// マップチップを表示
 	for (int y = 0; y < kChipNumY; y++)
 	{
@@ -260,7 +265,6 @@ void Map::Draw()
 				m_handle, true);
 		}
 	}
-	//DrawRectGraph(160,100,)
 }
 
 void Map::MapUpdate()

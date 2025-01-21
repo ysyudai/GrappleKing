@@ -1,18 +1,17 @@
 #pragma once
 
 #include "SceneController.h"
-#include "Player.h"
-#include "Map.h"
 #include "Scene.h"
-
+class Player;
+class Map;
 class SceneGame:public Scene
 {
 public:
 	SceneGame(SceneController& cont);
 	~SceneGame();
 
-	void Update();
-	void Draw();
+	void Update() override;
+	void Draw() override;
 
 private:
 
