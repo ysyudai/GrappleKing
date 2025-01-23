@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{7a2b15cd-56d8-4108-a495-6a1ea4f71898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\メインシーン">
+      <UniqueIdentifier>{12924cdf-3aa2-47b7-8b2e-245c092b9b84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\タイトルシーン">
+      <UniqueIdentifier>{b1840b49-18fb-49b6-a8dc-ec4d807bd62e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\リザルトシーン">
+      <UniqueIdentifier>{4c8940e0-f6cc-41dd-a709-5a4eb3045a43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -21,29 +33,29 @@
     <ClCompile Include="Player.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneController.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Map.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneGame.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneTitle.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Pad.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="SceneResult.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="Scene\Scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneController.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneMain.cpp">
+      <Filter>Scene\メインシーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneTitle.cpp">
+      <Filter>Scene\タイトルシーン</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneResult.cpp">
+      <Filter>Scene\リザルトシーン</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,22 +65,10 @@
     <ClInclude Include="Player.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneController.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Map.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGame.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneTitle.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Pad.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
@@ -80,8 +80,23 @@
     <ClInclude Include="Vec2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="SceneResult.h">
+    <ClInclude Include="Scene\Scene.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneController.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneMain.h">
+      <Filter>Scene\メインシーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneTitle.h">
+      <Filter>Scene\タイトルシーン</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneResult.h">
+      <Filter>Scene\リザルトシーン</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

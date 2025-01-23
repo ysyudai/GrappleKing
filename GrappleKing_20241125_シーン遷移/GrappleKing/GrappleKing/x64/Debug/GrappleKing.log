@@ -1,5 +1,7 @@
 ﻿  Map.cpp
   Player.cpp
-  SceneGame.cpp
+  SceneMain.cpp
+  SceneResult.cpp
   コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   GrappleKing.vcxproj -> C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe

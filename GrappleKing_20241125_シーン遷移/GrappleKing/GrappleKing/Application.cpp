@@ -3,7 +3,7 @@
 #include <cassert>
 #include "game.h"
 #include <string>
-#include "SceneController.h"
+#include "Scene/SceneController.h"
 #include "Pad.h"
 
 Application::Application() :
@@ -66,9 +66,9 @@ void Application::Run()
 		auto nowTime = GetTickCount64();
 		if (nowTime < frame_milliseconds + lastTime)
 		{
-			Sleep(frame_milliseconds + lastTime - nowTime);
+			Sleep(static_cast<DWORD>(frame_milliseconds + lastTime - nowTime));
 		}
-		lastTime = GetTickCount64();
+		lastTime = static_cast<DWORD>(GetTickCount64());
 	}
 	Terminate();
 }

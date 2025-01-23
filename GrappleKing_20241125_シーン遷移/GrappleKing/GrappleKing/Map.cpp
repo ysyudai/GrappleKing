@@ -162,12 +162,15 @@ namespace
 		{28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30},
 		{50,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,52},
 	};
+
+	//雲のスピード
+	constexpr int kCloudSpeed = 10;
 }
 
 Map::Map(Player* pPlayer) :
 	m_handle(-1),
-	m_mapHandle(-1),
-	m_d_padHandle(-1),
+	m_backHandle(-1),
+	m_cloudsHandle{-1,-1,-1,-1},
 	m_graphChipNumX(0),
 	m_graphChipNumY(0),
 	m_chipNo(0),
@@ -188,8 +191,11 @@ Map::Map(Player* pPlayer) :
 {
 	m_player = pPlayer;
 	m_handle = LoadGraph("data/image/map.png");
-	m_mapHandle = LoadGraph("data/image/background.png");
-	m_d_padHandle = LoadGraph("data/image/D-pad.png");
+	m_backHandle = LoadGraph("data/image/blue_bg.png");
+	m_cloudsHandle[0] = LoadGraph("data/image/cloud1.png");
+	m_cloudsHandle[1] = LoadGraph("data/image/cloud1.png");
+	m_cloudsHandle[2] = LoadGraph("data/image/cloud1.png");
+	m_cloudsHandle[3] = LoadGraph("data/image/cloud1.png");
 	
 	// 読み込んだグラフィックにチップが何個あるかを教えておく
 	int graphWidth = 0;
@@ -203,8 +209,10 @@ Map::Map(Player* pPlayer) :
 Map::~Map()
 {
 	DeleteGraph(m_handle);
-	DeleteGraph(m_mapHandle);
-	DeleteGraph(m_d_padHandle);
+	for (int i = 0; i < 4; i++)
+	{
+		DeleteGraph(m_cloudsHandle[i]);
+	}
 }
 
 void Map::Update()
@@ -218,10 +226,8 @@ void Map::Update()
 
 void Map::Draw()
 {
-	//画面全体を空色で埋め尽くす
-	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(160, 216, 239), true);
-
-	//雲を表示
+	//背景
+	DrawGraph(0, 0, m_backHandle, false);
 
 	// マップチップを表示
 	for (int y = 0; y < kChipNumY; y++)
@@ -269,7 +275,6 @@ void Map::Draw()
 
 void Map::MapUpdate()
 {
-	// マップチップを表示するテスト
 	for (int y = 0; y < kChipNumY; y++)
 	{
 		for (int x = 0; x < kChipNumX; x++)
@@ -382,4 +387,6 @@ void Map::MapUpdate()
 			}			
 		}
 	}
+
+
 }

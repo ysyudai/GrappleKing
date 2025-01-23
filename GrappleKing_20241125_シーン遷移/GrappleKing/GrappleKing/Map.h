@@ -1,7 +1,6 @@
 #pragma once
 
 class Player;
-
 class Map
 {
 public:
@@ -36,9 +35,9 @@ public:
 private:
 	// グラフィックのハンドル
 	int m_handle;
-	int m_mapHandle;
-	int m_d_padHandle;
-
+	int m_backHandle;
+	int m_cloudsHandle[4];
+	
 	// グラフィックにチップがいくつ含まれているか
 	int m_graphChipNumX;
 	int m_graphChipNumY;
@@ -56,5 +55,7 @@ private:
 	int m_chipLeftWall;
 	int m_chipRightWall;
 	int m_chipBottomCeiling;
+
+	//Vec2 m_cloudsPos[4];
 	
 };
