@@ -11,12 +11,16 @@ public:
 	SceneResult(SceneController& cont);
 	~SceneResult();
 
-	void Update();
-	void Draw();
+	void Update()override;
+	void Draw()override;
 
 private:
 	//背景
 	int m_backHandle;
+	int m_clearHandle;
+
+	int graphSizeX;
+	int graphSizeY;
 
 	//ゲームオーバー演出に使用するフレーム
 	int m_gameoverFrameCount;
@@ -24,4 +28,5 @@ private:
 	bool m_isGameEnd;
 	//フェード処理
 	int m_fadeFrameCount;
+
 };

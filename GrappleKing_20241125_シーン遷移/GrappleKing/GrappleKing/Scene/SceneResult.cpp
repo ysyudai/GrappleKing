@@ -7,13 +7,18 @@
 
 namespace
 {
-	//ゲームオーバーの文字が表示されきるまでのフレーム数
+	//ゲームクリアの文字が表示されきるまでのフレーム数
 	constexpr int kGameoverFadeFrame = 90;
+
+	constexpr int kClearY = Game::kScreenHeight + 100;
 }
 
 SceneResult::SceneResult(SceneController& cont) :
 	Scene(cont),
 	m_backHandle(-1),
+	m_clearHandle(-1),
+	graphSizeX(0),
+	graphSizeY(0),
 	m_gameoverFrameCount(0),
 	m_isGameEnd(false),
 	m_fadeFrameCount(0)
@@ -27,31 +32,31 @@ SceneResult::~SceneResult()
 }
 
 void SceneResult::Update()
-{
-	//ゲームオーバーになった後１ボタンを押したらフェードアウト
-	m_fadeFrameCount--;
+{	
+	//ゲームクリアになった後スペースキーを押したらフェードアウト
+	if (m_fadeFrameCount > 0)
+	{
+		m_fadeFrameCount--;
+	}
 	if (m_fadeFrameCount < 0)
 	{
 		m_fadeFrameCount = 0;
 
-		if (Pad::IsTrigger(PAD_INPUT_1)) {
-			controller_.ChangeScene(std::make_shared<SceneTitle>(controller_));
+		controller_.ChangeScene(std::make_shared<SceneTitle>(controller_));
 
-			return;
-		}
+		return;
 	}
-
 	else
 	{
 		//フェードイン処理
 		m_fadeFrameCount++;
-		if (m_fadeFrameCount > 30)
+		if (m_fadeFrameCount > kGameoverFadeFrame)
 		{
-			m_fadeFrameCount = 30;
+			m_fadeFrameCount = kGameoverFadeFrame;
 		}
 	}
 
-	//ゲームオーバー演出
+	//ゲームクリア演出
 	m_gameoverFrameCount++;
 	if (m_gameoverFrameCount >= kGameoverFadeFrame)
 	{
@@ -66,7 +71,7 @@ void SceneResult::Draw()
 #endif
 
 	//背景
-	DrawGraph(0, 0, m_backHandle, false);
+	DrawGraph(0, 0, m_backHandle, true);
 
 	//割合を使用して変換を行う
 		//m_gameoverFrameCountを信仰割合に変換する
@@ -78,14 +83,18 @@ void SceneResult::Draw()
 	//ここ以降呼ばれるDraw関数の描画方法を変更する
 	SetDrawBlendMode(DX_BLENDMODE_ALPHA, alpha);
 
-	int width = GetDrawStringWidth("GAME CLEAR", static_cast<int>(strlen("GAME CLEAR")), false);
+	/*int width = GetDrawStringWidth("GAME CLEAR", static_cast<int>(strlen("GAME CLEAR")), false);
 	DrawRotaFormatString(static_cast<int>(Game::kScreenWidth * 0.5 - width * 2.5),
 		static_cast<int>(Game::kScreenHeight * 0.5 - 100), 5, 3,
-		0, 0, 0, 0xffffff, 0x000000, false, "GAME CLEAR", 0);
+		0, 0, 0, 0xffffff, 0x000000, false, "GAME CLEAR", 0);*/
+
+	GetGraphSize(m_clearHandle, &graphSizeX, &graphSizeY);
+
+	DrawGraph(static_cast<int>(Game::kScreenWidth * 0.5 - graphSizeX * 0.5), kClearY, m_clearHandle, true);
 
 	if (m_gameoverFrameCount >= kGameoverFadeFrame)
 	{
-		width = GetDrawStringWidth("スペースキーを押してタイトルに戻る",
+		int width = GetDrawStringWidth("スペースキーを押してタイトルに戻る",
 			static_cast<int>(strlen("スペースキーを押してタイトルに戻る")));
 		DrawString(static_cast<int>(Game::kScreenWidth * 0.5 - width * 0.5),
 			static_cast<int>(Game::kScreenHeight * 0.5 + 150),

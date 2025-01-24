@@ -266,8 +266,7 @@ void Player::Action(Map& map)
 				m_isClear = true;
 			}
 		}
-	}
-		
+	}		
 
 	//âÊñ äO(ç∂âE)Ç…Ç¢Ç©Ç»Ç¢ÇÊÇ§Ç…Ç∑ÇÈ
 	if (GetLeft() < 0)

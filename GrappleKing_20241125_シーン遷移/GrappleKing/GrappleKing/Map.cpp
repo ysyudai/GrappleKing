@@ -162,15 +162,11 @@ namespace
 		{28,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,30},
 		{50,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,51,52},
 	};
-
-	//雲のスピード
-	constexpr int kCloudSpeed = 10;
 }
 
 Map::Map(Player* pPlayer) :
 	m_handle(-1),
 	m_backHandle(-1),
-	m_cloudsHandle{-1,-1,-1,-1},
 	m_graphChipNumX(0),
 	m_graphChipNumY(0),
 	m_chipNo(0),
@@ -187,15 +183,12 @@ Map::Map(Player* pPlayer) :
 	m_chipBottomCeiling(0),
 	IsStage1(true),
 	IsStage2(false),
-	IsStage3(false)
+	IsStage3(false),
+	HitSpace(false)
 {
 	m_player = pPlayer;
 	m_handle = LoadGraph("data/image/map.png");
-	m_backHandle = LoadGraph("data/image/blue_bg.png");
-	m_cloudsHandle[0] = LoadGraph("data/image/cloud1.png");
-	m_cloudsHandle[1] = LoadGraph("data/image/cloud1.png");
-	m_cloudsHandle[2] = LoadGraph("data/image/cloud1.png");
-	m_cloudsHandle[3] = LoadGraph("data/image/cloud1.png");
+	m_backHandle = LoadGraph("data/image/blue_bg2.png");
 	
 	// 読み込んだグラフィックにチップが何個あるかを教えておく
 	int graphWidth = 0;
@@ -209,10 +202,6 @@ Map::Map(Player* pPlayer) :
 Map::~Map()
 {
 	DeleteGraph(m_handle);
-	for (int i = 0; i < 4; i++)
-	{
-		DeleteGraph(m_cloudsHandle[i]);
-	}
 }
 
 void Map::Update()
@@ -275,6 +264,17 @@ void Map::Draw()
 
 void Map::MapUpdate()
 {
+	if (CheckHitKey(KEY_INPUT_SPACE))
+	{
+		HitSpace = true;
+	}
+	if (HitSpace)
+	{
+		IsStage1 = false;
+		IsStage2 = false;
+		IsStage3 = true;
+	}
+
 	for (int y = 0; y < kChipNumY; y++)
 	{
 		for (int x = 0; x < kChipNumX; x++)
@@ -327,21 +327,6 @@ void Map::MapUpdate()
 					m_player->SetPos(NextPos);
 					*/
 				}
-				/*if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth &&
-					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
-				{
-					DrawString(10,160,"hit\n",0xffffff);
-				}
-				if (x * kChipWidth < m_player->GetRight() && m_player->GetRight() < x * kChipWidth + kChipWidth &&
-					y * kChipHeight < m_player->GetTop() && m_player->GetTop() < y * kChipHeight + kChipHeight)
-				{
-					DrawString(10, 160, "hit\n", 0xffffff);
-				}
-				if (x * kChipWidth < m_player->GetLeft() && m_player->GetLeft() < x * kChipWidth + kChipWidth&&
-					y * kChipHeight + kChipHeight < m_player->GetBottom() && m_player->GetBottom() < y * kChipHeight)
-				{
-
-				}*/
 			}
 
 			//天井に当たった時

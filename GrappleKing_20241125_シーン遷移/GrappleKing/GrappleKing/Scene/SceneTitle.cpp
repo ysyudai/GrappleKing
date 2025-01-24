@@ -99,9 +99,9 @@ void SceneTitle::FadeInUpdate()
 
 void SceneTitle::FadeOutUpdate()
 {
-	++frame_;
+	frame_ += 2;
 
-	if (frame_ >= 60)
+	if (frame_ >= fade_interval)
 	{
 		controller_.ChangeScene(std::make_shared<SceneMain>(controller_));
 		return;
@@ -110,18 +110,15 @@ void SceneTitle::FadeOutUpdate()
 
 void SceneTitle::NormalUpdate()
 {
-	// スペースキーの状態を取得
-	bool isSpaceKeyCurrentlyPressed = (CheckHitKey(KEY_INPUT_SPACE) != 0);
+	//スペースキーを押すと次へ
+	//bool isSpaceKeyCurrentlyPressed = (CheckHitKey(KEY_INPUT_SPACE)!=0);
 
 	// エンターキーが推されるまで何もしない
-		if (isSpaceKeyCurrentlyPressed && !isSpaceKeyPressed)
-		{
-			update_ = &SceneTitle::FadeOutUpdate;
-			draw_ = &SceneTitle::FadeDraw;
-		}
-
-		// スペースキーの状態を更新
-		isSpaceKeyPressed = isSpaceKeyCurrentlyPressed;
+	if (CheckHitKey(KEY_INPUT_SPACE))
+	{
+		update_ = &SceneTitle::FadeOutUpdate;
+		draw_ = &SceneTitle::FadeDraw;
+	}
 }
 
 void SceneTitle::FadeDraw()

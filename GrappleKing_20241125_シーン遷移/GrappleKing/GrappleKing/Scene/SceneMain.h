@@ -16,5 +16,5 @@ public:
 private:
 
 	Player* m_pPlayer;
-	Map* m_Map;
+	Map* m_pMap;
 };

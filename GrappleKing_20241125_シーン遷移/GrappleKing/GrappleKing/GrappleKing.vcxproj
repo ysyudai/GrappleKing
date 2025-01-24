@@ -151,7 +151,6 @@
     <ClCompile Include="Scene\SceneTitle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Actor.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Geometry.h" />
