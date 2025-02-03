@@ -24,14 +24,21 @@ public:
 	//プレイヤーの情報を変更する
 	void SetPos(const Vec2 pos);
 
+	//ステージをクリアしたかどうかの情報を取得
+	int IsClearStage1() const { return m_isClearStage1; }
+	int IsClearStage2() const { return m_isClearStage2; }
+	int IsClearStage3() const { return m_isClearStage3; }
+
 	//1フレーム前のプレイヤーの座標を覚えておく
 	Vec2 LastPos;
+
+	int LastPosBottom;
 
 	//ロープが伸び始める座標
 	Vec2 LinePos;
 
 	Vec2 Velocity;
-
+	
 	void OnGround(Map& map);
 
 	bool IsClear() const{ return m_isClear; }
@@ -43,6 +50,7 @@ private:
 	int m_handleIdle;
 	int m_handleRun;
 	int m_handleUp;
+	int m_handleFall;
 
 	//フレーム数を数える
 	int m_animFrame;
@@ -54,7 +62,7 @@ private:
 
 	//現在再生中のアニメーション
 	//true:走っている　false:待機
-	bool m_isRun;
+	//bool m_isRun;
 
 	//プレイヤーの位置
 	Vec2 m_pos;
@@ -77,5 +85,39 @@ private:
 	//ロープの処理
 	void RopeMove(Map& map);
 
+	//ステージを全てクリアしたどうか
 	bool m_isClear;
+
+	//着地した瞬間の縦横比(倍率)
+	//Vec2 m_extRate;
+
+	int left;
+	int top;
+	int right;
+	int bottom;
+
+	Vec2 m_posPlus;
+
+	int groundChipTop;
+	bool isGroundChipHit;
+
+	int plusFrame;
+
+	bool onJustGround;
+
+	// 地面の判定を無効にするフラグとカウンタ
+	bool m_ignoreGroundCollision;
+	int m_ignoreGroundCollisionFrameCount;
+
+	// 着地後の無効フレームをカウントするフラグとカウンタ
+	bool m_landingCooldown;
+	int m_landingCooldownFrameCount;
+
+	int poyonnFrame;
+
+	bool m_isClearStage1;
+	bool m_isClearStage2;
+	bool m_isClearStage3;
+
+	int stage1frame;
 };

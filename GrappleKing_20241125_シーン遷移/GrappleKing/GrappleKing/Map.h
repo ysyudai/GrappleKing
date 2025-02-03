@@ -36,6 +36,8 @@ private:
 	// グラフィックのハンドル
 	int m_handle;
 	int m_backHandle;
+
+	int m_stageNoHandle[3];
 	
 	// グラフィックにチップがいくつ含まれているか
 	int m_graphChipNumX;
@@ -56,4 +58,7 @@ private:
 	int m_chipBottomCeiling;	
 
 	bool HitSpace;
+
+	int graphSizeX;
+	int graphSizeY;
 };

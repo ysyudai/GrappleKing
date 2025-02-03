@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "SceneController.h"
 
+class TitlePlayer;
 /// <summary>
 /// タイトルシーン
 /// </summary>
@@ -10,20 +11,15 @@ class SceneTitle : public Scene
 public:
 	SceneTitle(SceneController& cont);
 	virtual ~SceneTitle()override;
-	/// <summary>
-	/// 派生クラスで実装を実装
-	/// virtual はこれを継承するかもしれないから、
-	/// overrideは明示的にオーバーライドをエディタに示すため
-	/// </summary>
-	virtual void Update() override;
 
+	virtual void Update() override;
 	virtual void Draw() override;
 
 private:
 	int frame_ = 0;
 	// 背景
-	int m_backHandle = -1;
-	int m_titleHandle = -1;
+	int m_backHandle;
+	int m_titleHandle;
 
 	int graphSizeX;
 	int graphSizeY;
@@ -54,6 +50,5 @@ private:
 	//タイトルのY座標
 	int m_titleY;
 
-	
+	TitlePlayer* m_pTitlePlayer;
 };
-

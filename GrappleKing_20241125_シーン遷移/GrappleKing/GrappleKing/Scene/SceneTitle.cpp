@@ -6,6 +6,7 @@
 #include "../Application.h"
 #include "../Pad.h"
 #include "../game.h"
+#include "../TitlePlayer.h"
 
 namespace
 {
@@ -18,7 +19,7 @@ namespace
 
 	//文字の表示位置
 	constexpr int kTitleY = 200;
-	constexpr int kButtonTextY = 280;
+	//constexpr int kButtonTextY = 280;
 
 	//タイトルの表示速度
 	constexpr int kTitleSpeed = 4;
@@ -26,6 +27,10 @@ namespace
 
 SceneTitle::SceneTitle(SceneController& cont) :
 	Scene(cont),
+	m_backHandle(-1),
+	m_titleHandle(-1),
+	graphSizeX(0),
+	graphSizeY(0),
 	update_(&SceneTitle::FadeInUpdate),
 	draw_(&SceneTitle::FadeDraw),
 	frame_(fade_interval),
@@ -37,16 +42,21 @@ SceneTitle::SceneTitle(SceneController& cont) :
 	assert(m_titleHandle != -1);
 	m_backHandle = LoadGraph("data/image/blue_bg.png");
 	assert(m_backHandle != -1);
+	
+	m_pTitlePlayer = new TitlePlayer();
 }
 
 SceneTitle::~SceneTitle()
 {
 	DeleteGraph(m_backHandle);
 	DeleteGraph(m_titleHandle);
+	
 }
 
 void SceneTitle::Update()
 {
+	m_pTitlePlayer->Update();
+
 	//1秒サイクルで表示、非表示を切り替える
 	m_blinkFrameCount++;
 	if (m_blinkFrameCount >= kBlinkCycleFrame)
@@ -65,6 +75,9 @@ void SceneTitle::Draw()
 	
 	//背景
 	DrawGraph(0, 0, m_backHandle, false);
+
+	//タイトルで大体どんなゲームか分かるようにする
+	m_pTitlePlayer->Draw();
 
 	//タイトルの表示
 	//int width = static_cast<int>(GetDrawStringWidth("Grapple King",
@@ -110,9 +123,6 @@ void SceneTitle::FadeOutUpdate()
 
 void SceneTitle::NormalUpdate()
 {
-	//スペースキーを押すと次へ
-	//bool isSpaceKeyCurrentlyPressed = (CheckHitKey(KEY_INPUT_SPACE)!=0);
-
 	// エンターキーが推されるまで何もしない
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
@@ -141,6 +151,8 @@ void SceneTitle::NormalDraw()
 #ifdef _DEBUG
 	DrawString(10, 10, "Title Scene", 0xffffff);
 #endif
+
+	//DrawGraph(100,100,player.)
 
 	//スペースキーを押してください
 	if (m_blinkFrameCount < kBlinkDispFrame)

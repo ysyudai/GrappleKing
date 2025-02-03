@@ -8,7 +8,7 @@ SceneController::SceneController()
 	// 一番最初のシーンだけは割り当てる
 	// 自分自身のインスタンスを渡してあげる
 	//ChangeScene(std::make_shared<SceneTitle>(*this));
-	ChangeScene(std::make_shared<SceneTitle>(*this));
+	ChangeScene(std::make_shared<SceneMain>(*this));
 }
 
 void SceneController::Update()
