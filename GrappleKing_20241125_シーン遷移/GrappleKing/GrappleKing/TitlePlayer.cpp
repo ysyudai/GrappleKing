@@ -52,6 +52,8 @@ void TitlePlayer::Update()
 
 void TitlePlayer::Draw()
 {
-	DrawLine(m_pos.x + kGraphWidth, m_pos.y, m_linePos.x, m_linePos.y, 0xffffff, 0);
-	DrawRotaGraph(m_pos.x + kGraphWidth, m_pos.y, 2, 0, m_playerHandle, true);	
+	DrawLine(static_cast<int>(m_pos.x + kGraphWidth), static_cast<int>(m_pos.y, m_linePos.x),
+		static_cast<int>(m_linePos.y), 0xffffff, 0);
+	DrawRotaGraph(static_cast<int>(m_pos.x + kGraphWidth), static_cast<int>(m_pos.y),
+		2, 0, m_playerHandle, true);
 }

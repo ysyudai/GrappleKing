@@ -243,7 +243,7 @@ void Player::Update(Map& map)
 
 			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
 			
-			m_clearGraphPosX -= kClearSpeed;
+			m_clearGraphPosX -= static_cast<int>(kClearSpeed);
 		}
 		if (map.IsStage2)
 		{
@@ -251,13 +251,13 @@ void Player::Update(Map& map)
 
 			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
 			
-			m_clearGraphPosX += kClearSpeed;
+			m_clearGraphPosX += static_cast<int>(kClearSpeed);
 		}
 		if (map.IsStage3)
 		{
 			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
 			
-			m_clearGraphPosX -= kClearSpeed;
+			m_clearGraphPosX -= static_cast<int>(kClearSpeed);
 		}
 	}
 
@@ -328,7 +328,8 @@ void Player::Draw()
 	
 	if (stage1frame > 0)
 	{
-		DrawGraph(m_clearGraphPosX,Game::kScreenHeight*0.5f - m_clearGraphSizeY * 0.5,
+		DrawGraph(static_cast<int>(m_clearGraphPosX),
+			static_cast<int>(Game::kScreenHeight*0.5f) - static_cast<int>(m_clearGraphSizeY) * 0.5,
 			m_handleStageClear[0],true);
 	}
 

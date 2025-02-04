@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -39,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -70,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SceneTitle.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.h",
@@ -82,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SceneMain.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.h",
@@ -94,20 +98,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "SceneResult.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneResult.h",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h",
               "RelativeToolTip": "GrappleKing\\Scene\\SceneResult.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-20T06:24:14.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "SceneController.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneController.cpp",
@@ -119,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.h",
               "RelativeDocumentMoniker": "GrappleKing\\Player.h",
@@ -131,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Map.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.h",
               "RelativeDocumentMoniker": "GrappleKing\\Map.h",
@@ -143,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "TitlePlayer.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h",
               "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.h",
@@ -157,11 +161,24 @@
         },
         {
           "DockedWidth": 2133,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\main.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\main.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\main.cpp",
+              "RelativeToolTip": "GrappleKing\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-04T09:53:56.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SceneTitle.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.cpp",
@@ -173,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SceneMain.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.cpp",
@@ -185,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SceneResult.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneResult.cpp",
@@ -197,32 +214,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Player.cpp",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp",
               "RelativeToolTip": "GrappleKing\\Player.cpp",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAwGUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAADUBAAAAAAAAAAAgwEsBAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-14T07:42:08.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "TitlePlayer.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.cpp",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
               "RelativeToolTip": "GrappleKing\\TitlePlayer.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwDkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T03:00:03.388Z"
+              "WhenOpened": "2025-02-03T03:00:03.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Map.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Map.cpp",
