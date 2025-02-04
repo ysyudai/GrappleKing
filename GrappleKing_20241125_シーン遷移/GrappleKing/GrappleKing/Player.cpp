@@ -33,6 +33,9 @@ namespace
 	//ロープが延びる速度
 	constexpr float kSpeedRope = 10.0f;
 
+	//ステージクリアハンドルが移動する速度
+	constexpr float kClearSpeed = 8.0f;
+	
 	//重力
 	constexpr float kGravity = 10.0f;
 }
@@ -43,6 +46,7 @@ Player::Player() :
 	m_handleRun(-1),
 	m_handleUp(-1),
 	m_handleFall(-1),
+	m_handleStageClear{-1,-1,-1},
 	m_animFrame(0),
 	m_totalFrame(0),
 	m_pos(kDefaultX, kDefaultY),
@@ -71,7 +75,10 @@ Player::Player() :
 	groundChipTop(0),
 	isGroundChipHit(false),
 	LastPosBottom(0),
-	stage1frame(0)
+	stage1frame(0),
+	m_clearGraphSizeX(0),
+	m_clearGraphSizeY(0),
+	m_clearGraphPosX(Game::kScreenWidth+10)
 {
 	m_handleIdle = LoadGraph("data/Flog/idle.png");
 	assert(m_handleIdle != -1);
@@ -85,7 +92,15 @@ Player::Player() :
 	m_handleFall = LoadGraph("data/Flog/Fall.png");
 	assert(m_handleFall != -1);
 
+	m_handleStageClear[1] = LoadGraph("data/image/Stage1Clear.png");
+	assert(m_handleStageClear[1] != -1);
+	m_handleStageClear[2] = LoadGraph("data/image/Stage2Clear.png");
+	assert(m_handleStageClear[2] != -1);
+	m_handleStageClear[3] = LoadGraph("data/image/Stage3Clear.png");
+	assert(m_handleStageClear[3] != -1);
+
 	m_useHandle = m_handleIdle;
+	m_handleStageClear[0] = m_handleStageClear[1];
 }
 
 Player::~Player()
@@ -220,6 +235,32 @@ void Player::Update(Map& map)
 		}
 	}
 
+	if (stage1frame > 0)
+	{
+		if (map.IsStage1)
+		{
+			m_handleStageClear[0] = m_handleStageClear[2];
+
+			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
+			
+			m_clearGraphPosX -= kClearSpeed;
+		}
+		if (map.IsStage2)
+		{
+			m_handleStageClear[0] = m_handleStageClear[3];
+
+			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
+			
+			m_clearGraphPosX += kClearSpeed;
+		}
+		if (map.IsStage3)
+		{
+			GetGraphSize(m_handleStageClear[0], &m_clearGraphSizeX, &m_clearGraphSizeY);
+			
+			m_clearGraphPosX -= kClearSpeed;
+		}
+	}
+
 	//プレイヤーの加速度を更新
 	m_pos += Velocity;	
 }
@@ -267,9 +308,7 @@ void Player::Draw()
 	top = static_cast<int>(m_pos.y - kGraphHeight * 2.0f);
 	right = static_cast<int>(GetLeft());
 	bottom = static_cast<int>(GetBottom()); 
-
 	
-
 	if (m_isDirLeft)
 	{
 		// 右向きの場合、手動で反転
@@ -285,6 +324,12 @@ void Player::Draw()
 			static_cast<int>(left + m_posPlus.x), bottom,
 			animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 			m_useHandle, true);
+	}
+	
+	if (stage1frame > 0)
+	{
+		DrawGraph(m_clearGraphPosX,Game::kScreenHeight*0.5f - m_clearGraphSizeY * 0.5,
+			m_handleStageClear[0],true);
 	}
 
 #ifdef _DEBUG
@@ -403,11 +448,10 @@ void Player::Action(Map& map)
 		//画面外(上)に行くとクリア
 		if (m_pos.y < -50)
 		{
+			stage1frame++;
 			if (map.IsStage1)
-			{	
-
+			{//マップがステージ1のとき
 				m_isDirLeft = false;
-				m_isRopeMove = false;
 				m_isCanMove = false;
 				LinePos = m_pos;
 
@@ -417,32 +461,65 @@ void Player::Action(Map& map)
 				map.IsWallHit = false;
 				map.IsCeilingHit = false;
 
-				map.IsStage1 = false;
-				map.IsStage2 = true;
+				if (stage1frame > 300)
+				{
+					m_clearGraphPosX = - m_clearGraphSizeX - 10;					
 
-				m_pos = { Game::kScreenWidth - kDefaultX,kDefaultY };
+					m_isRopeMove = false;
+
+					map.IsStage1 = false;
+					map.IsStage2 = true;
+
+					m_pos = { Game::kScreenWidth - kDefaultX,kDefaultY };
+				}
+				else
+				{
+					m_pos.y = -50;
+				}
 			}
 			else if (map.IsStage2)
 			{
 				m_isDirLeft = true;
-				m_isRopeMove = false;
+				
 				m_isCanMove = false;
 				LinePos = m_pos;
 				map.m_isGroundHit = false;
 				map.IsWallHit = false;
 				map.IsCeilingHit = false;
 
-				map.IsStage2 = false;
-				map.IsStage3 = true;
+				if (stage1frame > 300)
+				{
+					m_clearGraphPosX = Game::kScreenWidth + 10;					
 
-				m_pos = { Game::kScreenWidth * 0.5f ,kDefaultY };
+					m_isRopeMove = false;
+
+					map.IsStage2 = false;
+					map.IsStage3 = true;
+
+					m_pos = { Game::kScreenWidth * 0.5f ,kDefaultY };
+				}
+				else
+				{
+					m_pos.y = -50;
+				}
 			}
 			else if (map.IsStage3)
 			{
-				m_isClear = true;
+				if (stage1frame > 300)
+				{
+					m_isClear = true;
+				}
+				else
+				{
+					m_pos.y = -50;
+				}
 			}
 		}
-	}		
+	}
+	else
+	{
+		stage1frame = 0;
+	}
 
 	//画面外(左右)にいかないようにする
 	if (GetLeft() < 0)

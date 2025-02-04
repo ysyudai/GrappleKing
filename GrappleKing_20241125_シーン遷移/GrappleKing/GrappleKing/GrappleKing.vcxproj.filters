@@ -66,9 +66,6 @@
     <ClCompile Include="TitlePlayer.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\SceneClearStage1.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -109,9 +106,6 @@
     </ClInclude>
     <ClInclude Include="TitlePlayer.h">
       <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\SceneClearStage1.h">
-      <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

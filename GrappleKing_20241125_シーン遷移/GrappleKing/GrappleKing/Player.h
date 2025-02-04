@@ -52,6 +52,9 @@ private:
 	int m_handleUp;
 	int m_handleFall;
 
+	//ステージクリアのグラフィックハンドル
+	int m_handleStageClear[4];
+
 	//フレーム数を数える
 	int m_animFrame;
 
@@ -120,4 +123,9 @@ private:
 	bool m_isClearStage3;
 
 	int stage1frame;
+
+	int m_clearGraphSizeX;
+	int m_clearGraphSizeY;
+
+	int m_clearGraphPosX;
 };

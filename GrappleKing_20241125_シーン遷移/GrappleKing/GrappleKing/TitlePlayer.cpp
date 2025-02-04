@@ -5,12 +5,15 @@
 
 namespace
 {
+	constexpr int kGraphWidth = 64;
+
 	constexpr int kSpeedY = 4;
 }
 
 TitlePlayer::TitlePlayer():
 	m_playerHandle(-1),
-	m_pos{128,Game::kScreenHeight + 100 },
+	m_pos{0,-64},
+	m_posOver(0),
 	m_linePos(m_pos)
 {
 	m_playerHandle = LoadGraph("data/Flog/ropeMove.png");
@@ -24,7 +27,10 @@ TitlePlayer::~TitlePlayer()
 
 void TitlePlayer::Update()
 {
-	if (m_linePos.y < -20)
+	//m_posOver = GetRand(720*6);
+	m_posOver = 0;
+
+	if (m_linePos.y < -(m_posOver + 15))
 	{
 		m_pos.y -= kSpeedY;
 	}
@@ -33,17 +39,19 @@ void TitlePlayer::Update()
 		m_linePos.y -= kSpeedY * 1.5f;
 	}
 
-	if (m_pos.y < -20)
+	if (m_pos.y < -(m_posOver + 15))
 	{
-		int x = GetRand(10);
-		m_pos.x = 100 * x;
-		m_pos.y = Game::kScreenHeight + 100;
-		m_linePos = m_pos;
+		int x = GetRand(1240);
+		int y = GetRand(720);
+		m_pos.x = static_cast<float>(x + 20);
+		m_pos.y = static_cast<float>(y + Game::kScreenHeight);
+		m_linePos.x = static_cast<float>(m_pos.x + kGraphWidth);
+		m_linePos.y = m_pos.y;
 	}
 }
 
 void TitlePlayer::Draw()
 {
-	DrawRotaGraph(m_pos.x, m_pos.y, 2, 0, m_playerHandle, true);
-	DrawLine(m_pos.x, m_pos.y, m_linePos.x, m_linePos.y, 0xffffff, 0);
+	DrawLine(m_pos.x + kGraphWidth, m_pos.y, m_linePos.x, m_linePos.y, 0xffffff, 0);
+	DrawRotaGraph(m_pos.x + kGraphWidth, m_pos.y, 2, 0, m_playerHandle, true);	
 }

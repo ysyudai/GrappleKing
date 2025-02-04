@@ -20,6 +20,8 @@ private:
 	int m_backHandle;
 	int m_clearHandle;
 
+	int m_musicHandle;
+
 	int graphSizeX;
 	int graphSizeY;
 

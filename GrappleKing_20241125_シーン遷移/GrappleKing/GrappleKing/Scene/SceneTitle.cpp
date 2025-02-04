@@ -23,12 +23,17 @@ namespace
 
 	//タイトルの表示速度
 	constexpr int kTitleSpeed = 4;
+
+	//プレイヤーの数
+	constexpr int kPlayerNo = 40;
 }
 
 SceneTitle::SceneTitle(SceneController& cont) :
 	Scene(cont),
 	m_backHandle(-1),
 	m_titleHandle(-1),
+	m_inductionHandle(-1),
+	m_musicHandle(-1),
 	graphSizeX(0),
 	graphSizeY(0),
 	update_(&SceneTitle::FadeInUpdate),
@@ -36,26 +41,43 @@ SceneTitle::SceneTitle(SceneController& cont) :
 	frame_(fade_interval),
 	m_blinkFrameCount(0),
 	isSpaceKeyPressed(false),
-	m_titleY(Game::kScreenHeight + 100)	
+	m_titleY(Game::kScreenHeight + 100)
 {
 	m_titleHandle = LoadGraph("data/image/GameTitle.png");
 	assert(m_titleHandle != -1);
 	m_backHandle = LoadGraph("data/image/blue_bg.png");
 	assert(m_backHandle != -1);
+	m_inductionHandle = LoadGraph("data/image/pressSpace.png");
+	assert(m_inductionHandle != -1);
+
+	m_musicHandle = LoadSoundMem("data/music/titleMusic.mp3");
+	assert(m_musicHandle != -1);
 	
-	m_pTitlePlayer = new TitlePlayer();
+	PlaySoundMem(m_musicHandle, DX_PLAYTYPE_LOOP);
+
+	for (int i = 0; i < kPlayerNo; i++)
+	{
+		m_pTitlePlayer[i] = new TitlePlayer();
+	}
 }
 
 SceneTitle::~SceneTitle()
 {
 	DeleteGraph(m_backHandle);
 	DeleteGraph(m_titleHandle);
-	
+	DeleteGraph(m_inductionHandle);
+
+	DeleteSoundMem(m_musicHandle);
 }
 
 void SceneTitle::Update()
 {
-	m_pTitlePlayer->Update();
+	ChangeVolumeSoundMem(128, m_musicHandle);
+
+	for (int i = 0; i < kPlayerNo; i++)
+	{
+		m_pTitlePlayer[i]->Update();
+	}
 
 	//1秒サイクルで表示、非表示を切り替える
 	m_blinkFrameCount++;
@@ -77,7 +99,10 @@ void SceneTitle::Draw()
 	DrawGraph(0, 0, m_backHandle, false);
 
 	//タイトルで大体どんなゲームか分かるようにする
-	m_pTitlePlayer->Draw();
+	for (int i = 0; i < kPlayerNo; i++)
+	{
+		m_pTitlePlayer[i]->Draw();
+	}
 
 	//タイトルの表示
 	//int width = static_cast<int>(GetDrawStringWidth("Grapple King",
@@ -116,6 +141,7 @@ void SceneTitle::FadeOutUpdate()
 
 	if (frame_ >= fade_interval)
 	{
+		StopSoundMem(m_musicHandle);
 		controller_.ChangeScene(std::make_shared<SceneMain>(controller_));
 		return;
 	}
@@ -152,16 +178,18 @@ void SceneTitle::NormalDraw()
 	DrawString(10, 10, "Title Scene", 0xffffff);
 #endif
 
-	//DrawGraph(100,100,player.)
-
 	//スペースキーを押してください
 	if (m_blinkFrameCount < kBlinkDispFrame)
 	{
-		int width = GetDrawStringWidth("PRESS SPACE KEY",
+		/*int width = GetDrawStringWidth("PRESS SPACE KEY",
 			static_cast<int>(strlen("PRESS SPACE KEY")));
 
 		DrawRotaFormatString(static_cast<int>(Game::kScreenWidth * 0.5 - width),
 			static_cast<int>(Game::kScreenHeight * 0.5 + 150), 2, 2,
-			0, 0, 0, 0x000000, 0xffffff, false, "PRESS SPACE KEY", 0);
+			0, 0, 0, 0x000000, 0xffffff, false, "PRESS SPACE KEY", 0);*/
+
+		GetGraphSize(m_inductionHandle, &graphSizeX, &graphSizeY);
+		DrawGraph(static_cast<int>(Game::kScreenWidth * 0.5 - graphSizeX * 0.5f),
+			static_cast<int>(Game::kScreenHeight * 0.5 + graphSizeY * 2.0f), m_inductionHandle, true);
 	}
 }

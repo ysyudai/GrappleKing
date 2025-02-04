@@ -15,6 +15,8 @@ public:
 
 private:
 
+	int m_musicHandle;
+
 	Player* m_pPlayer;
 	Map* m_pMap;
 };

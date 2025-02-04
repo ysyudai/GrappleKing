@@ -20,6 +20,9 @@ private:
 	// 背景
 	int m_backHandle;
 	int m_titleHandle;
+	int m_inductionHandle;
+
+	int m_musicHandle;
 
 	int graphSizeX;
 	int graphSizeY;
@@ -50,5 +53,5 @@ private:
 	//タイトルのY座標
 	int m_titleY;
 
-	TitlePlayer* m_pTitlePlayer;
+	TitlePlayer* m_pTitlePlayer[40];
 };

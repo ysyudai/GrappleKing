@@ -19,6 +19,7 @@ SceneResult::SceneResult(SceneController& cont) :
 	Scene(cont),
 	m_backHandle(-1),
 	m_clearHandle(-1),
+	m_musicHandle(-1),
 	graphSizeX(0),
 	graphSizeY(0),
 	update_(&SceneResult::FadeInUpdate),
@@ -30,16 +31,25 @@ SceneResult::SceneResult(SceneController& cont) :
 	assert(m_backHandle != -1);
 	m_clearHandle = LoadGraph("data/image/GameClear.png");
 	assert(m_clearHandle != -1);
+	m_musicHandle = LoadSoundMem("data/music/clearMusic.mp3");
+	assert(m_musicHandle != -1);
+
+	PlaySoundMem(m_musicHandle, DX_PLAYTYPE_LOOP);
 }
 
 SceneResult::~SceneResult()
 {
 	DeleteGraph(m_backHandle);
 	DeleteGraph(m_clearHandle);
+
+	StopSoundMem(m_musicHandle);
+	DeleteSoundMem(m_musicHandle);
 }
 
 void SceneResult::Update()
 {	
+	ChangeVolumeSoundMem(128, m_musicHandle);
+
 	(this->*update_) ();
 }
 

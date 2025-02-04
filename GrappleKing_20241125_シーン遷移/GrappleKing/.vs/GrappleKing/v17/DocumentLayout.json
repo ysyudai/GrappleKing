@@ -3,64 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Map.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneClearStage1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneTitle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneClearStage1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneResult.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneMain.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneTitle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\TitlePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Scene\\SceneController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Map.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{39641D4C-7FF0-40F6-9AED-2162D701491F}|GrappleKing\\GrappleKing.vcxproj|solutionrelative:GrappleKing\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1285,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,204 +70,167 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SceneController.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneController.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneController.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwgAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T05:44:23.819Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "SceneTitle.h",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.h",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneTitle.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-15T04:46:59.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
+              "Title": "SceneMain.h",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.h",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneMain.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-04T02:03:06.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "SceneResult.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h",
               "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneResult.h",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.h",
               "RelativeToolTip": "GrappleKing\\Scene\\SceneResult.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-01-20T06:24:14.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SceneController.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneController.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneController.cpp",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneController.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-03T05:44:23.819Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "TitlePlayer.h",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h",
-              "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.h",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h",
-              "RelativeToolTip": "GrappleKing\\TitlePlayer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-03T02:58:58.229Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SceneMain.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneMain.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-03T04:42:42.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TitlePlayer.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
-              "RelativeToolTip": "GrappleKing\\TitlePlayer.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T03:00:03.388Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.h",
               "RelativeDocumentMoniker": "GrappleKing\\Player.h",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.h",
               "RelativeToolTip": "GrappleKing\\Player.h",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAHkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAIEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-21T06:09:12.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SceneClearStage1.h",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.h",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneClearStage1.h",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.h",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneClearStage1.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-03T05:11:45.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T06:09:12.089Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SceneMain.h",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.h",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.h",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneMain.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T02:03:06.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SceneTitle.h",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.h",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.h",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneTitle.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-15T04:46:59.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "Map.h",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.h",
               "RelativeDocumentMoniker": "GrappleKing\\Map.h",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.h",
               "RelativeToolTip": "GrappleKing\\Map.h",
-              "ViewState": "AgIAACUAAAAAAAAAAAAqwD4AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwD4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-03T06:02:43.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:02:43.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TitlePlayer.h",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h",
+              "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.h",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.h",
+              "RelativeToolTip": "GrappleKing\\TitlePlayer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-03T02:58:58.229Z"
             }
           ]
         },
         {
           "DockedWidth": 2133,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "SceneTitle.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneTitle.cpp",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAI4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T04:42:42.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SceneMain.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneMain.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneMain.cpp",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneMain.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-03T04:42:42.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SceneResult.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneResult.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp",
+              "RelativeToolTip": "GrappleKing\\Scene\\SceneResult.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-20T06:24:11.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Player.cpp",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Player.cpp",
               "RelativeToolTip": "GrappleKing\\Player.cpp",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAAwBgBAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAwGUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-14T07:42:08.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "TitlePlayer.cpp",
+              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
+              "RelativeDocumentMoniker": "GrappleKing\\TitlePlayer.cpp",
+              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\TitlePlayer.cpp",
+              "RelativeToolTip": "GrappleKing\\TitlePlayer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-03T03:00:03.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Map.cpp",
               "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.cpp",
               "RelativeDocumentMoniker": "GrappleKing\\Map.cpp",
               "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Map.cpp",
               "RelativeToolTip": "GrappleKing\\Map.cpp",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAAABQBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACkBAAAAAAAAAAAYwOwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-03T04:42:41.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SceneClearStage1.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneClearStage1.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneClearStage1.cpp",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneClearStage1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-03T05:16:03.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SceneTitle.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneTitle.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneTitle.cpp",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneTitle.cpp",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAiwIUAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-03T04:42:42.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneResult.cpp",
-              "DocumentMoniker": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp",
-              "RelativeDocumentMoniker": "GrappleKing\\Scene\\SceneResult.cpp",
-              "ToolTip": "C:\\Users\\fko2447015\\Documents\\GitHub\\GrappleKing\\GrappleKing_20241125_\u30B7\u30FC\u30F3\u9077\u79FB\\GrappleKing\\GrappleKing\\Scene\\SceneResult.cpp",
-              "RelativeToolTip": "GrappleKing\\Scene\\SceneResult.cpp",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAwGkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-20T06:24:11.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T04:42:41.879Z"
             }
           ]
         }
