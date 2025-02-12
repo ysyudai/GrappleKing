@@ -1,3 +1,0 @@
-﻿  Player.cpp
-C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\GrappleKing\Player.cpp(332,47): warning C4244: '引数': 'double' から 'int' への変換です。データが失われる可能性があります。
-  GrappleKing.vcxproj -> C:\Users\fko2447015\Documents\GitHub\GrappleKing\GrappleKing_20241125_シーン遷移\GrappleKing\x64\Debug\GrappleKing.exe
